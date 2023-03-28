@@ -6,8 +6,12 @@ class TasksController < ApplicationController
     end
 
     def show
-        task = Task.find(params[:id])
-        render json: task
+        task = Task.find_by(id: params[:id])
+        if task
+            render json: task, status: :found
+        else
+            render json: { message: "Task not found" }, status: :not_found
+        end
     end
 
     def create 
@@ -25,6 +29,15 @@ class TasksController < ApplicationController
             render json: { message: "task updated successfully"}
         else
             render json: task.errors.full_messages
+        end
+    end
+
+    def destroy
+        task = Task.find(params[:id])
+        if task.destroy
+            render json: { message: "Task destroyed successfully"}
+        else
+            render json: { message: "Failed to destroy task"}
         end
     end
 

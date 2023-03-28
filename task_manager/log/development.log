@@ -448,3 +448,198 @@ Processing by TasksController#create as */*
 Completed 200 OK in 44ms (Views: 0.8ms | ActiveRecord: 3.1ms | Allocations: 16987)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2023-03-28 14:28:56 +0300
+Processing by TasksController#index as */*
+  Parameters: {"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "task"=>{"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.2ms | Allocations: 2821)
+
+
+  
+SyntaxError (/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/serializers/task_serializer.rb:3: syntax error, unexpected ':', expecting `end'
+  has_one: user
+         ^
+/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/serializers/task_serializer.rb:4: syntax error, unexpected ':', expecting `end'
+  has_one: project
+         ^
+):
+  
+app/serializers/task_serializer.rb:3: syntax error, unexpected ':', expecting `end'
+app/serializers/task_serializer.rb:4: syntax error, unexpected ':', expecting `end'
+app/serializers/task_serializer.rb:3: syntax error, unexpected ':', expecting `end'
+app/serializers/task_serializer.rb:4: syntax error, unexpected ':', expecting `end'
+app/controllers/tasks_controller.rb:5:in `index'
+Started GET "/tasks" for 127.0.0.1 at 2023-03-28 14:29:28 +0300
+Processing by TasksController#index as */*
+  Parameters: {"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "task"=>{"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.3ms | Allocations: 2961)
+
+
+  
+SyntaxError (/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/serializers/task_serializer.rb:3: syntax error, unexpected ':', expecting `end'
+  belongs_to: user
+            ^
+/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/serializers/task_serializer.rb:4: syntax error, unexpected ':', expecting `end'
+  belongs_to: project
+            ^
+):
+  
+app/serializers/task_serializer.rb:3: syntax error, unexpected ':', expecting `end'
+app/serializers/task_serializer.rb:4: syntax error, unexpected ':', expecting `end'
+app/serializers/task_serializer.rb:3: syntax error, unexpected ':', expecting `end'
+app/serializers/task_serializer.rb:4: syntax error, unexpected ':', expecting `end'
+app/controllers/tasks_controller.rb:5:in `index'
+Started GET "/tasks" for 127.0.0.1 at 2023-03-28 14:30:13 +0300
+Processing by TasksController#index as */*
+  Parameters: {"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "task"=>{"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Project Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Project Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Project Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Project Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (130.66ms)
+Completed 200 OK in 149ms (Views: 143.0ms | ActiveRecord: 6.0ms | Allocations: 43675)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2023-03-28 14:30:35 +0300
+Processing by TasksController#show as */*
+  Parameters: {"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "id"=>"2", "task"=>{"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `show'
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:10:in `show'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (8.24ms)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.8ms | Allocations: 2750)
+
+
+Started DELETE "/tasks/2" for 127.0.0.1 at 2023-03-28 14:36:14 +0300
+Processing by TasksController#destroy as */*
+  Parameters: {"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "id"=>"2", "task"=>{"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:32:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:33:in `destroy'
+  [1m[36mTask Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/tasks_controller.rb:33:in `destroy'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:33:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 13ms (Views: 1.3ms | ActiveRecord: 3.8ms | Allocations: 3892)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2023-03-28 14:36:24 +0300
+Processing by TasksController#show as */*
+  Parameters: {"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "id"=>"2", "task"=>{"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 495)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=2):
+  
+app/controllers/tasks_controller.rb:9:in `show'
+Started GET "/tasks/2" for 127.0.0.1 at 2023-03-28 14:37:57 +0300
+Processing by TasksController#show as */*
+  Parameters: {"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "id"=>"2", "task"=>{"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 1.5ms | Allocations: 814)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=2):
+  
+app/controllers/tasks_controller.rb:9:in `show'
+Started GET "/tasks/2" for 127.0.0.1 at 2023-03-28 14:37:58 +0300
+Processing by TasksController#show as */*
+  Parameters: {"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "id"=>"2", "task"=>{"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `show'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.3ms | Allocations: 494)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=2):
+  
+app/controllers/tasks_controller.rb:9:in `show'
+Started GET "/tasks/2" for 127.0.0.1 at 2023-03-28 14:38:37 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#show as */*
+  Parameters: {"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "id"=>"2", "task"=>{"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `show'
+Completed 404 Not Found in 22ms (ActiveRecord: 1.1ms | Allocations: 20095)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=2):
+  
+app/controllers/tasks_controller.rb:9:in `show'
+Started GET "/tasks/2" for 127.0.0.1 at 2023-03-28 14:38:54 +0300
+Processing by TasksController#show as */*
+  Parameters: {"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "id"=>"2", "task"=>{"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 404 Not Found in 6ms (Views: 2.8ms | ActiveRecord: 1.1ms | Allocations: 1129)
+
+
