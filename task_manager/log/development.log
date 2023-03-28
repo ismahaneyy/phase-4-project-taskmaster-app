@@ -432,3 +432,19 @@ Processing by TasksController#update as */*
 Completed 200 OK in 52ms (Views: 1.7ms | ActiveRecord: 5.1ms | Allocations: 14733)
 
 
+Started POST "/tasks" for 127.0.0.1 at 2023-03-28 14:20:44 +0300
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "task"=>{"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}}
+[31mUnpermitted parameter: :task. Context: { controller: TasksController, action: create, request: #<ActionDispatch::Request:0x00007fbf34e25a40>, params: {"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "controller"=>"tasks", "action"=>"create", "task"=>{"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 44ms (Views: 0.8ms | ActiveRecord: 3.1ms | Allocations: 16987)
+
+
