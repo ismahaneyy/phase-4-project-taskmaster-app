@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  due_date: 2023-03-28
+  completed: false
+  project: one
+  user: one
+
+two:
+  name: MyString
+  description: MyText
+  due_date: 2023-03-28
+  completed: false
+  project: two
+  user: two
