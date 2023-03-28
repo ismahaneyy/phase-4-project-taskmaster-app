@@ -1,0 +1,434 @@
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20230328080631)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328080631"]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTasks (20230328080947)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "due_date" date, "completed" boolean, "project_id" integer NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_02e851e3b7"
+FOREIGN KEY ("project_id")
+  REFERENCES "projects" ("id")
+, CONSTRAINT "fk_rails_4d2a9e4d7e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_project_id" ON "tasks" ("project_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_user_id" ON "tasks" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328080947"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProjects (20230328081438)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "due_date" date, "user_id" integer NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_b872a6760a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_projects_on_user_id" ON "projects" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328081438"]]
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePasswordResets (20230328081836)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "password_resets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "token" varchar, "expires_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_526379cd99"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_password_resets_on_user_id" ON "password_resets" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328081836"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-28 08:31:00.752017"], ["updated_at", "2023-03-28 08:31:00.752017"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "jeff"], ["email", "jeff@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-28 09:30:19.615297"], ["updated_at", "2023-03-28 09:30:19.615297"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Create (2.4ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project one"], ["description", "random description to check validations"], ["due_date", nil], ["user_id", 1], ["completed", 1], ["created_at", "2023-03-28 09:30:19.679665"], ["updated_at", "2023-03-28 09:30:19.679665"]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "jeff"], ["email", "jeff@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-28 09:38:18.882293"], ["updated_at", "2023-03-28 09:38:18.882293"]]
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "kettiah"], ["email", "kettiah@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-28 09:38:19.131850"], ["updated_at", "2023-03-28 09:38:19.131850"]]
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "ismahan"], ["email", "ismahan@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-28 09:38:19.382535"], ["updated_at", "2023-03-28 09:38:19.382535"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "alex"], ["email", "alex@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-28 09:38:19.617096"], ["updated_at", "2023-03-28 09:38:19.617096"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project one"], ["description", "random description to check validations"], ["due_date", nil], ["user_id", 2], ["completed", 1], ["created_at", "2023-03-28 09:38:19.653310"], ["updated_at", "2023-03-28 09:38:19.653310"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Create (0.2ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project two"], ["description", "random description to check validations"], ["due_date", nil], ["user_id", 2], ["completed", 1], ["created_at", "2023-03-28 09:38:19.660864"], ["updated_at", "2023-03-28 09:38:19.660864"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project three"], ["description", "random description to check validations"], ["due_date", nil], ["user_id", 2], ["completed", 1], ["created_at", "2023-03-28 09:38:19.667636"], ["updated_at", "2023-03-28 09:38:19.667636"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project four"], ["description", "random description to check validations"], ["due_date", nil], ["user_id", 2], ["completed", 1], ["created_at", "2023-03-28 09:38:19.674901"], ["updated_at", "2023-03-28 09:38:19.674901"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project five"], ["description", "random description to check validations"], ["due_date", nil], ["user_id", 2], ["completed", 1], ["created_at", "2023-03-28 09:38:19.682491"], ["updated_at", "2023-03-28 09:38:19.682491"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "task one"], ["description", "random description to check validations"], ["due_date", nil], ["completed", nil], ["project_id", 2], ["user_id", 2], ["created_at", "2023-03-28 09:38:19.709841"], ["updated_at", "2023-03-28 09:38:19.709841"]]
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "task two"], ["description", "random description to check validations"], ["due_date", nil], ["completed", nil], ["project_id", 2], ["user_id", 2], ["created_at", "2023-03-28 09:38:19.720014"], ["updated_at", "2023-03-28 09:38:19.720014"]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "task three"], ["description", "random description to check validations"], ["due_date", nil], ["completed", nil], ["project_id", 2], ["user_id", 2], ["created_at", "2023-03-28 09:38:19.732628"], ["updated_at", "2023-03-28 09:38:19.732628"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "task four"], ["description", "random description to check validations"], ["due_date", nil], ["completed", nil], ["project_id", 2], ["user_id", 2], ["created_at", "2023-03-28 09:38:19.742180"], ["updated_at", "2023-03-28 09:38:19.742180"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Create (0.2ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "task five"], ["description", "random description to check validations"], ["due_date", nil], ["completed", nil], ["project_id", 2], ["user_id", 2], ["created_at", "2023-03-28 09:38:19.750462"], ["updated_at", "2023-03-28 09:38:19.750462"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "jeff"], ["email", "jeff@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-28 09:38:30.997963"], ["updated_at", "2023-03-28 09:38:30.997963"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "kettiah"], ["email", "kettiah@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-28 09:38:31.241663"], ["updated_at", "2023-03-28 09:38:31.241663"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "ismahan"], ["email", "ismahan@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-28 09:38:31.468809"], ["updated_at", "2023-03-28 09:38:31.468809"]]
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "alex"], ["email", "alex@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-28 09:38:31.703112"], ["updated_at", "2023-03-28 09:38:31.703112"]]
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project one"], ["description", "random description to check validations"], ["due_date", nil], ["user_id", 6], ["completed", 1], ["created_at", "2023-03-28 09:38:31.733347"], ["updated_at", "2023-03-28 09:38:31.733347"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project two"], ["description", "random description to check validations"], ["due_date", nil], ["user_id", 6], ["completed", 1], ["created_at", "2023-03-28 09:38:31.741798"], ["updated_at", "2023-03-28 09:38:31.741798"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mProject Create (0.2ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project three"], ["description", "random description to check validations"], ["due_date", nil], ["user_id", 6], ["completed", 1], ["created_at", "2023-03-28 09:38:31.750212"], ["updated_at", "2023-03-28 09:38:31.750212"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mProject Create (0.2ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project four"], ["description", "random description to check validations"], ["due_date", nil], ["user_id", 6], ["completed", 1], ["created_at", "2023-03-28 09:38:31.757107"], ["updated_at", "2023-03-28 09:38:31.757107"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mProject Create (0.2ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project five"], ["description", "random description to check validations"], ["due_date", nil], ["user_id", 6], ["completed", 1], ["created_at", "2023-03-28 09:38:31.764164"], ["updated_at", "2023-03-28 09:38:31.764164"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "task one"], ["description", "random description to check validations"], ["due_date", nil], ["completed", nil], ["project_id", 7], ["user_id", 6], ["created_at", "2023-03-28 09:38:31.785822"], ["updated_at", "2023-03-28 09:38:31.785822"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "task two"], ["description", "random description to check validations"], ["due_date", nil], ["completed", nil], ["project_id", 7], ["user_id", 6], ["created_at", "2023-03-28 09:38:31.794566"], ["updated_at", "2023-03-28 09:38:31.794566"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "task three"], ["description", "random description to check validations"], ["due_date", nil], ["completed", nil], ["project_id", 7], ["user_id", 6], ["created_at", "2023-03-28 09:38:31.802819"], ["updated_at", "2023-03-28 09:38:31.802819"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "task four"], ["description", "random description to check validations"], ["due_date", nil], ["completed", nil], ["project_id", 7], ["user_id", 6], ["created_at", "2023-03-28 09:38:31.810744"], ["updated_at", "2023-03-28 09:38:31.810744"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "task five"], ["description", "random description to check validations"], ["due_date", nil], ["completed", nil], ["project_id", 7], ["user_id", 6], ["created_at", "2023-03-28 09:38:31.823665"], ["updated_at", "2023-03-28 09:38:31.823665"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 2]]
+Started GET "/tasks" for 127.0.0.1 at 2023-03-28 12:44:02 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant TasksController
+Did you mean?  TaskController):
+  
+Started GET "/tasks" for 127.0.0.1 at 2023-03-28 12:44:27 +0300
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+Completed 200 OK in 116ms (Views: 60.0ms | ActiveRecord: 1.8ms | Allocations: 42709)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2023-03-28 12:48:01 +0300
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.5ms | Allocations: 1918)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2023-03-28 12:48:05 +0300
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms | Allocations: 1916)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2023-03-28 12:49:58 +0300
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.4ms | Allocations: 1901)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2023-03-28 12:50:18 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as */*
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+No serializer found for resource: #<Task id: 1, name: "task one", description: "random description to check validations", due_date: nil, completed: nil, project_id: 2, user_id: 2, created_at: "2023-03-28 09:38:19.709841000 +0000", updated_at: "2023-03-28 09:38:19.709841000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Task::ActiveRecord_Relation (3.64ms)
+Completed 200 OK in 86ms (Views: 42.2ms | ActiveRecord: 3.0ms | Allocations: 42801)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2023-03-28 12:50:54 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.83ms)
+Completed 200 OK in 103ms (Views: 74.0ms | ActiveRecord: 2.4ms | Allocations: 44200)
+
+
+Started GET "/tasks/3" for 127.0.0.1 at 2023-03-28 12:52:40 +0300
+Processing by TasksController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `show'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 200 OK in 48ms (Views: 2.0ms | ActiveRecord: 2.5ms | Allocations: 6747)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2023-03-28 14:01:48 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as */*
+  Parameters: {"name"=>"Make a salad", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "task"=>{"name"=>"Make a salad", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.54ms)
+Completed 200 OK in 47ms (Views: 30.8ms | ActiveRecord: 1.1ms | Allocations: 39284)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2023-03-28 14:01:54 +0300
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"Make a salad", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "task"=>{"name"=>"Make a salad", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}}
+[31mUnpermitted parameter: :task. Context: { controller: TasksController, action: create, request: #<ActionDispatch::Request:0x00007fbf2c010340>, params: {"name"=>"Make a salad", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "controller"=>"tasks", "action"=>"create", "task"=>{"name"=>"Make a salad", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14:in `create'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:14:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:14:in `create'
+  [1m[36mTask Create (1.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Make a salad"], ["description", "a task about salads"], ["due_date", "2022-12-01"], ["completed", 1], ["project_id", 2], ["user_id", 2], ["created_at", "2023-03-28 11:01:54.699354"], ["updated_at", "2023-03-28 11:01:54.699354"]]
+  ↳ app/controllers/tasks_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14:in `create'
+Completed 204 No Content in 84ms (ActiveRecord: 5.8ms | Allocations: 28422)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2023-03-28 14:02:51 +0300
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"Make a salad", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "task"=>{"name"=>"Make a salad", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}}
+[31mUnpermitted parameter: :task. Context: { controller: TasksController, action: create, request: #<ActionDispatch::Request:0x00007fbf34d2ccd8>, params: {"name"=>"Make a salad", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "controller"=>"tasks", "action"=>"create", "task"=>{"name"=>"Make a salad", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Create (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Make a salad"], ["description", "a task about salads"], ["due_date", "2022-12-01"], ["completed", 1], ["project_id", 2], ["user_id", 2], ["created_at", "2023-03-28 11:02:51.896277"], ["updated_at", "2023-03-28 11:02:51.896277"]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (0.83ms)
+Completed 200 OK in 55ms (Views: 4.4ms | ActiveRecord: 7.1ms | Allocations: 14910)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2023-03-28 14:03:05 +0300
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"Make a salad", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "task"=>{"name"=>"Make a salad", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}}
+[31mUnpermitted parameter: :task. Context: { controller: TasksController, action: create, request: #<ActionDispatch::Request:0x00007fbf38ad1b10>, params: {"name"=>"Make a salad", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "controller"=>"tasks", "action"=>"create", "task"=>{"name"=>"Make a salad", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Make a salad"], ["description", "a task about salads"], ["due_date", "2022-12-01"], ["completed", 1], ["project_id", 2], ["user_id", 2], ["created_at", "2023-03-28 11:03:05.806300"], ["updated_at", "2023-03-28 11:03:05.806300"]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 201 Created in 58ms (Views: 3.4ms | ActiveRecord: 7.8ms | Allocations: 14903)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2023-03-28 14:03:18 +0300
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "task"=>{"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}}
+[31mUnpermitted parameter: :task. Context: { controller: TasksController, action: create, request: #<ActionDispatch::Request:0x00007fbf387aa680>, params: {"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "controller"=>"tasks", "action"=>"create", "task"=>{"name"=>"", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", ""], ["description", "a task about salads"], ["due_date", "2022-12-01"], ["completed", 1], ["project_id", 2], ["user_id", 2], ["created_at", "2023-03-28 11:03:18.786355"], ["updated_at", "2023-03-28 11:03:18.786355"]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 201 Created in 26ms (Views: 1.4ms | ActiveRecord: 6.2ms | Allocations: 3649)
+
+
+Started PUT "/tasks/1" for 127.0.0.1 at 2023-03-28 14:11:09 +0300
+  
+SyntaxError (/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/controllers/tasks_controller.rb:25: syntax error, unexpected tLABEL
+...        render json: ( message: "updated task successfully" ...
+...                       ^~~~~~~~
+/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/controllers/tasks_controller.rb:25: syntax error, unexpected local variable or method, expecting ')'
+...updated task successfully" data: task)
+...                           ^~~~
+/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/controllers/tasks_controller.rb:27: syntax error, unexpected tLABEL
+...         render json: (message: 'failed', data: { info: 'som...
+...                       ^~~~~~~~
+/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/controllers/tasks_controller.rb:27: syntax error, unexpected ',', expecting ')'
+...ender json: (message: 'failed', data: { info: 'something wen...
+...                              ^
+/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/controllers/tasks_controller.rb:27: syntax error, unexpected ',', expecting ')'
+...rong. could not update todo' }, status: :unprocessable_entit...
+...                              ^
+):
+  
+app/controllers/tasks_controller.rb:25: syntax error, unexpected tLABEL
+app/controllers/tasks_controller.rb:25: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/tasks_controller.rb:27: syntax error, unexpected tLABEL
+app/controllers/tasks_controller.rb:27: syntax error, unexpected ',', expecting ')'
+app/controllers/tasks_controller.rb:27: syntax error, unexpected ',', expecting ')'
+app/controllers/tasks_controller.rb:25: syntax error, unexpected tLABEL
+app/controllers/tasks_controller.rb:25: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/tasks_controller.rb:27: syntax error, unexpected tLABEL
+app/controllers/tasks_controller.rb:27: syntax error, unexpected ',', expecting ')'
+app/controllers/tasks_controller.rb:27: syntax error, unexpected ',', expecting ')'
+Started PUT "/tasks/1" for 127.0.0.1 at 2023-03-28 14:11:18 +0300
+  
+SyntaxError (/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/controllers/tasks_controller.rb:25: syntax error, unexpected tLABEL
+...        render json: ( message: "updated task successfully",...
+...                       ^~~~~~~~
+/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/controllers/tasks_controller.rb:25: syntax error, unexpected ',', expecting ')'
+...e: "updated task successfully", data: task)
+...                              ^
+/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/controllers/tasks_controller.rb:27: syntax error, unexpected tLABEL
+...         render json: (message: 'failed', data: { info: 'som...
+...                       ^~~~~~~~
+/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/controllers/tasks_controller.rb:27: syntax error, unexpected ',', expecting ')'
+...ender json: (message: 'failed', data: { info: 'something wen...
+...                              ^
+/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/controllers/tasks_controller.rb:27: syntax error, unexpected ',', expecting ')'
+...rong. could not update todo' }, status: :unprocessable_entit...
+...                              ^
+):
+  
+app/controllers/tasks_controller.rb:25: syntax error, unexpected tLABEL
+app/controllers/tasks_controller.rb:25: syntax error, unexpected ',', expecting ')'
+app/controllers/tasks_controller.rb:27: syntax error, unexpected tLABEL
+app/controllers/tasks_controller.rb:27: syntax error, unexpected ',', expecting ')'
+app/controllers/tasks_controller.rb:27: syntax error, unexpected ',', expecting ')'
+app/controllers/tasks_controller.rb:25: syntax error, unexpected tLABEL
+app/controllers/tasks_controller.rb:25: syntax error, unexpected ',', expecting ')'
+app/controllers/tasks_controller.rb:27: syntax error, unexpected tLABEL
+app/controllers/tasks_controller.rb:27: syntax error, unexpected ',', expecting ')'
+app/controllers/tasks_controller.rb:27: syntax error, unexpected ',', expecting ')'
+Started PUT "/tasks/1" for 127.0.0.1 at 2023-03-28 14:11:39 +0300
+  
+SyntaxError (/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/controllers/tasks_controller.rb:27: syntax error, unexpected tLABEL
+...         render json: (message: 'failed', data: { info: 'som...
+...                       ^~~~~~~~
+/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/controllers/tasks_controller.rb:27: syntax error, unexpected ',', expecting ')'
+...ender json: (message: 'failed', data: { info: 'something wen...
+...                              ^
+/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/controllers/tasks_controller.rb:27: syntax error, unexpected ',', expecting ')'
+...rong. could not update todo' }, status: :unprocessable_entit...
+...                              ^
+):
+  
+app/controllers/tasks_controller.rb:27: syntax error, unexpected tLABEL
+app/controllers/tasks_controller.rb:27: syntax error, unexpected ',', expecting ')'
+app/controllers/tasks_controller.rb:27: syntax error, unexpected ',', expecting ')'
+app/controllers/tasks_controller.rb:27: syntax error, unexpected tLABEL
+app/controllers/tasks_controller.rb:27: syntax error, unexpected ',', expecting ')'
+app/controllers/tasks_controller.rb:27: syntax error, unexpected ',', expecting ')'
+Started PUT "/tasks/1" for 127.0.0.1 at 2023-03-28 14:14:06 +0300
+Processing by TasksController#update as */*
+  Parameters: {"name"=>"changed", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "id"=>"1", "task"=>{"name"=>"changed", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:23:in `update'
+[31mUnpermitted parameters: :id, :task. Context: { controller: TasksController, action: update, request: #<ActionDispatch::Request:0x00007fbf2c138df8>, params: {"name"=>"changed", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "controller"=>"tasks", "action"=>"update", "id"=>"1", "task"=>{"name"=>"changed", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:23:in `update'
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:23:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:23:in `update'
+  [1m[36mTask Update (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "name" = ?, "description" = ?, "due_date" = ?, "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["name", "changed"], ["description", "a task about salads"], ["due_date", "2022-12-01"], ["completed", 1], ["updated_at", "2023-03-28 11:14:06.379697"], ["id", 1]]
+  ↳ app/controllers/tasks_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:23:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with TrueClass (0.09ms)
+Completed 200 OK in 56ms (Views: 2.7ms | ActiveRecord: 5.1ms | Allocations: 14785)
+
+
+Started PUT "/tasks/1" for 127.0.0.1 at 2023-03-28 14:15:18 +0300
+Processing by TasksController#update as */*
+  Parameters: {"name"=>"changed", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "id"=>"1", "task"=>{"name"=>"changed", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:23:in `update'
+[31mUnpermitted parameters: :id, :task. Context: { controller: TasksController, action: update, request: #<ActionDispatch::Request:0x00007fbf241746d0>, params: {"name"=>"changed", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "user_id"=>2, "project_id"=>2, "controller"=>"tasks", "action"=>"update", "id"=>"1", "task"=>{"name"=>"changed", "description"=>"a task about salads", "due_date"=>"1-12-2022", "completed"=>true, "project_id"=>2, "user_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:23:in `update'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:23:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:23:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 52ms (Views: 1.7ms | ActiveRecord: 5.1ms | Allocations: 14733)
+
+
