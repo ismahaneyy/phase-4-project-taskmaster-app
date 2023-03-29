@@ -5,4 +5,5 @@ class Project < ApplicationRecord
   validates :name, presence: true 
   validates :duedate, presence: true 
   
+  
 end
