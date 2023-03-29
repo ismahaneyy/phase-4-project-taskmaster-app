@@ -1,0 +1,1376 @@
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 00:04:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Example", "email"=>"Example@gmail.com"}}
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 422 Unprocessable Entity in 51ms (Views: 1.7ms | ActiveRecord: 1.2ms | Allocations: 39566)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 00:06:04 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Example", "email"=>"Example@gmail.com"}}
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 39ms (Views: 1.6ms | ActiveRecord: 1.9ms | Allocations: 39566)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 00:06:30 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Example", "email"=>"Example@gmail.com"}}
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.5ms | Allocations: 5912)
+
+
+  
+NoMethodError (undefined method `password' for #<User:0x00007f2f6ca2f218>
+Did you mean?  password_reset):
+  
+app/controllers/users_controller.rb:17:in `create'
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 00:08:02 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Example@gmail.com", "password_digest"=>"[FILTERED]", "user"=>{"name"=>"Example", "email"=>"Example@gmail.com", "password_digest"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :password_digest. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f57983f2e28>, params: {"name"=>"Example", "email"=>"Example@gmail.com", "password_digest"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"Example", "email"=>"Example@gmail.com", "password_digest"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 422 Unprocessable Entity in 43ms (Views: 3.0ms | ActiveRecord: 2.0ms | Allocations: 39676)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 00:08:10 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Example", "email"=>"Example@gmail.com"}}
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 422 Unprocessable Entity in 6ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1780)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 00:08:15 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Example", "email"=>"Example@gmail.com"}}
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 422 Unprocessable Entity in 8ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1778)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 00:08:47 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Example", "email"=>"Example@gmail.com"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.4ms | Allocations: 39126)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+app/controllers/users_controller.rb:18:in `create'
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 00:10:03 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Example", "email"=>"Example@gmail.com"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms | Allocations: 2037)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+app/controllers/users_controller.rb:18:in `create'
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 00:10:13 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Example", "email"=>"Example@gmail.com"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.24ms)
+Completed 200 OK in 44ms (Views: 2.1ms | ActiveRecord: 2.0ms | Allocations: 39441)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 00:10:33 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Example", "email"=>"Example@gmail.com"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.2ms)
+Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 0.8ms | Allocations: 2344)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 00:12:40 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Example", "email"=>"Example@gmail.com"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 422 Unprocessable Entity in 19ms (Views: 1.1ms | ActiveRecord: 2.4ms | Allocations: 6734)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 00:12:48 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Example", "email"=>"Example@gmail.com"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 422 Unprocessable Entity in 12ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 3626)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 00:13:20 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Example", "email"=>"Example@gmail.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f916cb64ec8>, params: {"name"=>"Example", "email"=>"Example@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"Example", "email"=>"Example@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Example"], ["email", "Example@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-28 21:13:20.842745"], ["updated_at", "2023-03-28 21:13:20.842745"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "Example@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.45ms)
+Completed 200 OK in 326ms (Views: 2.4ms | ActiveRecord: 6.5ms | Allocations: 40494)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 00:13:34 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Example", "email"=>"Example@gmail.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f916001fa10>, params: {"name"=>"Example", "email"=>"Example@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"Example", "email"=>"Example@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 286ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 5102)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 00:17:49 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Outwest@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Example", "email"=>"Outwest@gmail.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007ff09cbe3270>, params: {"name"=>"Example", "email"=>"Outwest@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"Example", "email"=>"Outwest@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Outwest@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Example"], ["email", "Outwest@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-28 21:17:49.747610"], ["updated_at", "2023-03-28 21:17:49.747610"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "Outwest@gmail.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.44ms)
+Completed 200 OK in 330ms (Views: 2.5ms | ActiveRecord: 6.2ms | Allocations: 40500)
+
+
+Started POST "/slogin" for 127.0.0.1 at 2023-03-29 00:18:06 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/slogin"):
+  
+Started POST "/login" for 127.0.0.1 at 2023-03-29 00:18:13 +0300
+  
+ActionController::RoutingError (uninitialized constant SessionsController
+Did you mean?  SessionController):
+  
+Started POST "/login" for 127.0.0.1 at 2023-03-29 00:18:42 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Outwest@gmail.com", "password"=>"[FILTERED]", "session"=>{"name"=>"Example", "email"=>"Outwest@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Outwest@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.3ms)
+Completed 200 OK in 309ms (Views: 0.8ms | ActiveRecord: 1.8ms | Allocations: 6769)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-03-29 00:19:49 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Outwest@gmail.com", "password"=>"[FILTERED]", "session"=>{"name"=>"Example", "email"=>"Outwest@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Outwest@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.32ms)
+Completed 200 OK in 310ms (Views: 1.0ms | ActiveRecord: 2.0ms | Allocations: 6897)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-03-29 00:21:19 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Outwest@gmail.com", "password"=>"[FILTERED]", "session"=>{"name"=>"Example", "email"=>"Outwest@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Outwest@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 500 Internal Server Error in 302ms (ActiveRecord: 1.5ms | Allocations: 8757)
+
+
+  
+NoMethodError (undefined method `find_by' for #<User:0x00007ff0a09c8888>):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-03-29 00:21:33 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"Example", "email"=>"Outwest@gmail.com", "password"=>"[FILTERED]", "session"=>{"name"=>"Example", "email"=>"Outwest@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Outwest@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.7ms)
+Completed 200 OK in 317ms (Views: 1.7ms | ActiveRecord: 1.9ms | Allocations: 7571)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 00:44:15 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Jeff", "email"=>"jeffgichuki68@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Jeff", "email"=>"jeffgichuki68@gmail.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x0000563cb2247760>, params: {"name"=>"Jeff", "email"=>"jeffgichuki68@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"Jeff", "email"=>"jeffgichuki68@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeffgichuki68@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jeff"], ["email", "jeffgichuki68@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-28 21:44:15.653584"], ["updated_at", "2023-03-28 21:44:15.653584"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "jeffgichuki68@gmail.com"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (Duration: 1.8ms | Allocations: 417)
+  Rendered layout layouts/mailer.html.erb (Duration: 3.0ms | Allocations: 660)
+WelcomeMailer#welcome_email: processed outbound mail in 41.4ms
+Delivered mail 64235fafc3e6d_97b126d434949@jeff-HP-ProBook-440-G5.mail (2790.3ms)
+Date: Wed, 29 Mar 2023 00:44:15 +0300
+From: from@example.com
+To: jeffgichuki68@gmail.com
+Message-ID: <64235fafc3e6d_97b126d434949@jeff-HP-ProBook-440-G5.mail>
+Subject: Welcome to My Site!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to My Site!</h1>
+<p>Thanks for signing up.</p>
+  </body>
+</html>
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.78ms)
+Completed 200 OK in 3274ms (Views: 10.0ms | ActiveRecord: 5.7ms | Allocations: 99561)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 08:32:29 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"new user", "email"=>"jeffgichuki68@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"new user", "email"=>"jeffgichuki68@gmail.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x000055878efb8090>, params: {"name"=>"new user", "email"=>"jeffgichuki68@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"new user", "email"=>"jeffgichuki68@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeffgichuki68@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeffgichuki68@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 422 Unprocessable Entity in 470ms (Views: 2.3ms | ActiveRecord: 2.9ms | Allocations: 41575)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 08:35:14 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f1dac01f3d0>, params: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "devyoungblud@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "devyoungblud@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 422 Unprocessable Entity in 395ms (Views: 1.2ms | ActiveRecord: 1.1ms | Allocations: 3254)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 08:35:22 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f1da4009ce0>, params: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "devyoungblud@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "new user"], ["email", "devyoungblud@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 05:35:22.600823"], ["updated_at", "2023-03-29 05:35:22.600823"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "devyoungblud@gmail.com"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (Duration: 1.8ms | Allocations: 311)
+  Rendered layout layouts/mailer.html.erb (Duration: 3.5ms | Allocations: 554)
+WelcomeMailer#welcome_email: processed outbound mail in 30.9ms
+Delivered mail 6423ce1abc300_cd2c2724176f5@jeff-HP-ProBook-440-G5.mail (2503.6ms)
+Date: Wed, 29 Mar 2023 08:35:22 +0300
+From: from@example.com
+To: devyoungblud@gmail.com
+Message-ID: <6423ce1abc300_cd2c2724176f5@jeff-HP-ProBook-440-G5.mail>
+Subject: Welcome to My Site!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to My Site!</h1>
+<p>Thanks for signing up.</p>
+  </body>
+</html>
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.72ms)
+Completed 200 OK in 3079ms (Views: 3.9ms | ActiveRecord: 6.9ms | Allocations: 51318)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-03-29 08:36:07 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "session"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "devyoungblud@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.35ms)
+Completed 200 OK in 406ms (Views: 1.0ms | ActiveRecord: 0.7ms | Allocations: 914)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2023-03-29 08:37:25 +0300
+Processing by TasksController#index as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "task"=>{"name"=>"new user"}}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.8ms | Allocations: 2131)
+
+
+  
+NameError (undefined local variable or method `user' for #<TasksController:0x00000000009560>
+Did you mean?  super):
+  
+app/controllers/tasks_controller.rb:4:in `index'
+Started GET "/tasks" for 127.0.0.1 at 2023-03-29 08:37:43 +0300
+Processing by TasksController#index as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "task"=>{"name"=>"new user"}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.9ms | Allocations: 602)
+
+
+  
+NoMethodError (undefined method `tasks' for nil:NilClass):
+  
+app/controllers/tasks_controller.rb:4:in `index'
+Started GET "/tasks" for 127.0.0.1 at 2023-03-29 08:38:48 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (undefined local variable or method `session' for TasksController:Class):
+  
+app/controllers/tasks_controller.rb:3:in `<class:TasksController>'
+app/controllers/tasks_controller.rb:1:in `<main>'
+Started GET "/tasks" for 127.0.0.1 at 2023-03-29 08:42:23 +0300
+Processing by TasksController#index as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "task"=>{"name"=>"new user"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 200 OK in 110ms (Views: 11.8ms | ActiveRecord: 3.3ms | Allocations: 44918)
+
+
+Started GET "/logout" for 127.0.0.1 at 2023-03-29 08:48:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started DELETE "/logout" for 127.0.0.1 at 2023-03-29 08:48:37 +0300
+  
+ActionController::RoutingError (uninitialized constant UserController
+Did you mean?  UsersController):
+  
+Started DELETE "/logout" for 127.0.0.1 at 2023-03-29 08:48:47 +0300
+Processing by UsersController#logout as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 1.0ms | Allocations: 314)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/application_controller.rb:16:in `logout_user'
+app/controllers/users_controller.rb:41:in `logout'
+Started DELETE "/logout" for 127.0.0.1 at 2023-03-29 08:49:03 +0300
+Processing by UsersController#logout as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.9ms | Allocations: 212)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2023-03-29 08:49:10 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/login"):
+  
+Started POST "/login" for 127.0.0.1 at 2023-03-29 08:49:15 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "session"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "devyoungblud@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.5ms)
+Completed 200 OK in 459ms (Views: 2.3ms | ActiveRecord: 1.9ms | Allocations: 2563)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2023-03-29 08:49:21 +0300
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "task"=>{"name"=>"new user"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+Completed 404 Not Found in 5ms (ActiveRecord: 1.1ms | Allocations: 798)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=0):
+  
+app/controllers/application_controller.rb:10:in `user'
+app/controllers/tasks_controller.rb:19:in `create'
+Started GET "/tasks" for 127.0.0.1 at 2023-03-29 08:49:27 +0300
+Processing by TasksController#index as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "task"=>{"name"=>"new user"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.2ms | Allocations: 665)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=0):
+  
+app/controllers/application_controller.rb:10:in `user'
+app/controllers/tasks_controller.rb:5:in `index'
+Started GET "/signup" for 127.0.0.1 at 2023-03-29 09:00:34 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 09:12:18 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f2420ae2608>, params: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "devyoungblud@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "devyoungblud@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.27ms)
+Completed 422 Unprocessable Entity in 472ms (Views: 3.5ms | ActiveRecord: 2.8ms | Allocations: 41035)
+
+
+Started POST "/user/destroy/2" for 127.0.0.1 at 2023-03-29 09:16:41 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/user/destroy/2"):
+  
+Started DELETE "/user/destroy/2" for 127.0.0.1 at 2023-03-29 09:16:46 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/user/destroy/2"):
+  
+Started DELETE "/user/destroy/2" for 127.0.0.1 at 2023-03-29 09:18:00 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/user/destroy/2"):
+  
+Started DELETE "/user/destroy/2" for 127.0.0.1 at 2023-03-29 09:18:21 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [DELETE] "/user/destroy/2"):
+  
+Started DELETE "/user/destroy/2" for 127.0.0.1 at 2023-03-29 09:18:35 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/user/destroy/2"):
+  
+Started DELETE "/user/destroy/2" for 127.0.0.1 at 2023-03-29 09:19:02 +0300
+Processing by UsersController#destroy as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "id"=>"2", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:46:in `destroy'
+  [1m[36mUser Destroy (3.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/users_controller.rb:46:in `destroy'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:46:in `destroy'
+Completed 204 No Content in 100ms (ActiveRecord: 9.2ms | Allocations: 37677)
+
+
+Started DELETE "/user/destroy/1" for 127.0.0.1 at 2023-03-29 09:19:41 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#destroy as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "id"=>"1", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:46:in `destroy'
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/users_controller.rb:46:in `destroy'
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:46:in `destroy'
+Completed 204 No Content in 66ms (ActiveRecord: 6.9ms | Allocations: 37663)
+
+
+Started DELETE "/user/destroy/2" for 127.0.0.1 at 2023-03-29 09:19:43 +0300
+Processing by UsersController#destroy as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "id"=>"2", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `destroy'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms | Allocations: 1027)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/users_controller.rb:46:in `destroy'
+Started DELETE "/user/destroy/3" for 127.0.0.1 at 2023-03-29 09:19:47 +0300
+Processing by UsersController#destroy as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "id"=>"3", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:46:in `destroy'
+  [1m[36mUser Destroy (1.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/users_controller.rb:46:in `destroy'
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:46:in `destroy'
+Completed 204 No Content in 25ms (ActiveRecord: 7.5ms | Allocations: 1763)
+
+
+Started DELETE "/user/destroy/4" for 127.0.0.1 at 2023-03-29 09:19:49 +0300
+Processing by UsersController#destroy as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "id"=>"4", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:46:in `destroy'
+  [1m[36mUser Destroy (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/users_controller.rb:46:in `destroy'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:46:in `destroy'
+Completed 204 No Content in 19ms (ActiveRecord: 6.9ms | Allocations: 1764)
+
+
+Started DELETE "/user/destroy/5" for 127.0.0.1 at 2023-03-29 09:19:57 +0300
+Processing by UsersController#destroy as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "id"=>"5", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:46:in `destroy'
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/users_controller.rb:46:in `destroy'
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:46:in `destroy'
+Completed 204 No Content in 18ms (ActiveRecord: 8.0ms | Allocations: 1745)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 09:20:40 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007ff1a4b045f8>, params: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "devyoungblud@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "new user"], ["email", "devyoungblud@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 06:20:41.330088"], ["updated_at", "2023-03-29 06:20:41.330088"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "devyoungblud@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (Duration: 2.1ms | Allocations: 311)
+  Rendered layout layouts/mailer.html.erb (Duration: 3.8ms | Allocations: 554)
+WelcomeMailer#welcome_email: processed outbound mail in 33.4ms
+Delivered mail 6423d8b97722f_e06c26d4240ce@jeff-HP-ProBook-440-G5.mail (2480.3ms)
+Date: Wed, 29 Mar 2023 09:20:41 +0300
+From: from@example.com
+To: devyoungblud@gmail.com
+Message-ID: <6423d8b97722f_e06c26d4240ce@jeff-HP-ProBook-440-G5.mail>
+Subject: Welcome to My Site!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to My Site!</h1>
+<p>Thanks for signing up.</p>
+  </body>
+</html>
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (1.14ms)
+Completed 200 OK in 3084ms (Views: 9.3ms | ActiveRecord: 7.1ms | Allocations: 86383)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-03-29 09:20:56 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007ff1a8e89580>, params: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "devyoungblud@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "devyoungblud@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 422 Unprocessable Entity in 433ms (Views: 1.7ms | ActiveRecord: 1.5ms | Allocations: 4565)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-03-29 09:21:20 +0300
+Processing by UsersController#login as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"new user", "email"=>"devyoungblud@gmail.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "devyoungblud@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 396ms (Views: 1.2ms | ActiveRecord: 2.5ms | Allocations: 2436)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2023-03-29 09:21:39 +0300
+Processing by TasksController#index as */*
+  Parameters: {"name"=>"new user", "email"=>"devyoungblud@gmail.com", "password"=>"[FILTERED]", "task"=>{"name"=>"new user"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 200 OK in 36ms (Views: 15.0ms | ActiveRecord: 2.4ms | Allocations: 6191)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2023-03-29 09:24:25 +0300
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "user_id"=>2, "project_id"=>1, "task"=>{"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "project_id"=>1, "user_id"=>2}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.5ms | Allocations: 2921)
+
+
+  
+NoMethodError (undefined method `task' for #<User:0x00007ff1a8ab43b0>
+Did you mean?  tasks):
+  
+app/controllers/tasks_controller.rb:19:in `create'
+Started POST "/tasks" for 127.0.0.1 at 2023-03-29 09:24:48 +0300
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "user_id"=>2, "project_id"=>1, "task"=>{"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "project_id"=>1, "user_id"=>2}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 4.4ms | Allocations: 8494)
+
+
+  
+NoMethodError (undefined method `Task' for #<User:0x00007ff1a8f64360>
+Did you mean?  tasks):
+  
+app/controllers/tasks_controller.rb:19:in `create'
+Started POST "/tasks" for 127.0.0.1 at 2023-03-29 09:24:58 +0300
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "user_id"=>2, "project_id"=>1, "task"=>{"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "project_id"=>1, "user_id"=>2}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+[31mUnpermitted parameter: :task. Context: { controller: TasksController, action: create, request: #<ActionDispatch::Request:0x00007ff1a8966288>, params: {"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "user_id"=>2, "project_id"=>1, "controller"=>"tasks", "action"=>"create", "task"=>{"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "project_id"=>1, "user_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 171ms (Views: 5.1ms | ActiveRecord: 10.7ms | Allocations: 28530)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeff@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "jeff"], ["email", "jeff@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 06:26:27.172740"], ["updated_at", "2023-03-29 06:26:27.172740"]]
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kettiah@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ismahan@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "alex@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeff@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kettiah@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ismahan@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "alex@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeff@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kettiah@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ismahan@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "alex@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeff@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kettiah@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ismahan@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "alex@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeff@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kettiah@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ismahan@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "alex@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeff@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kettiah@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ismahan@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "alex@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeff@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kettiah@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ismahan@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "alex@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started POST "/tasks" for 127.0.0.1 at 2023-03-29 09:31:37 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "name" : "task one",
+  "description" : "random task to valid routes",
+  "due_date" : "12-2-2004",
+  "completed" : true,
+  "user_id" : 2,
+}  
+Processing by TasksController#create as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+Completed 400 Bad Request in 29ms (ActiveRecord: 1.6ms | Allocations: 6237)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/tasks_controller.rb:49:in `task_params'
+app/controllers/tasks_controller.rb:19:in `create'
+Started POST "/tasks" for 127.0.0.1 at 2023-03-29 09:31:50 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "name" : "task one",
+  "description" : "random task to valid routes",
+  "due_date" : "12-2-2004",
+  "completed" : true,
+  "user_id" : 2,
+}  
+Processing by TasksController#create as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+Completed 400 Bad Request in 30ms (ActiveRecord: 3.1ms | Allocations: 6605)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/tasks_controller.rb:49:in `task_params'
+app/controllers/tasks_controller.rb:19:in `create'
+Started POST "/tasks" for 127.0.0.1 at 2023-03-29 09:32:16 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "user_id"=>6, "task"=>{"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "user_id"=>6}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+[31mUnpermitted parameter: :task. Context: { controller: TasksController, action: create, request: #<ActionDispatch::Request:0x00007f7754b44498>, params: {"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "user_id"=>6, "controller"=>"tasks", "action"=>"create", "task"=>{"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "user_id"=>6}} }[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.94ms)
+Completed 200 OK in 164ms (Views: 4.9ms | ActiveRecord: 3.2ms | Allocations: 66109)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2023-03-29 09:32:33 +0300
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "user_id"=>6, "task"=>{"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "user_id"=>6}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+[31mUnpermitted parameter: :task. Context: { controller: TasksController, action: create, request: #<ActionDispatch::Request:0x00007f7754eca798>, params: {"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "user_id"=>6, "controller"=>"tasks", "action"=>"create", "task"=>{"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "user_id"=>6}} }[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 200 OK in 62ms (Views: 1.7ms | ActiveRecord: 4.8ms | Allocations: 12453)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeff@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 6]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 7]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeff@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "jeff"], ["email", "jeff@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 06:38:49.365972"], ["updated_at", "2023-03-29 06:38:49.365972"]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kettiah@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ismahan@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "alex@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeff@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeff@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeff@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Create (0.8ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project one"], ["description", "random description to check validations"], ["due_date", nil], ["user_id", 8], ["completed", 1], ["created_at", "2023-03-29 06:44:59.927752"], ["updated_at", "2023-03-29 06:44:59.927752"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/tasks" for 127.0.0.1 at 2023-03-29 09:47:43 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "user_id"=>6, "project_id"=>1, "task"=>{"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "project_id"=>1, "user_id"=>6}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+Completed 404 Not Found in 52ms (ActiveRecord: 2.4ms | Allocations: 26109)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=6):
+  
+app/controllers/application_controller.rb:10:in `user'
+app/controllers/tasks_controller.rb:19:in `create'
+Started POST "/tasks" for 127.0.0.1 at 2023-03-29 09:47:50 +0300
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "user_id"=>8, "project_id"=>1, "task"=>{"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "project_id"=>1, "user_id"=>8}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms | Allocations: 685)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=6):
+  
+app/controllers/application_controller.rb:10:in `user'
+app/controllers/tasks_controller.rb:19:in `create'
+Started POST "/tasks" for 127.0.0.1 at 2023-03-29 09:47:55 +0300
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "user_id"=>8, "project_id"=>1, "task"=>{"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "project_id"=>1, "user_id"=>8}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.2ms | Allocations: 684)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=6):
+  
+app/controllers/application_controller.rb:10:in `user'
+app/controllers/tasks_controller.rb:19:in `create'
+Started POST "/logout" for 127.0.0.1 at 2023-03-29 09:48:25 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/logout"):
+  
+Started DELETE "/logout" for 127.0.0.1 at 2023-03-29 09:48:41 +0300
+Processing by UsersController#logout as */*
+  Parameters: {"name"=>"task one", "description"=>"random task to valid routes", "due_date"=>"12-2-2004", "completed"=>true, "user_id"=>8, "project_id"=>1, "user"=>{"name"=>"task one"}}
+Completed 204 No Content in 1ms (ActiveRecord: 1.3ms | Allocations: 221)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 09:56:18 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Jeff", "email"=>"jeffgichuki68@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Jeff", "email"=>"jeffgichuki68@gmail.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f02d4f46b08>, params: {"name"=>"Jeff", "email"=>"jeffgichuki68@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"Jeff", "email"=>"jeffgichuki68@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeffgichuki68@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jeff"], ["email", "jeffgichuki68@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 06:56:19.069547"], ["updated_at", "2023-03-29 06:56:19.069547"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "jeffgichuki68@gmail.com"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (Duration: 3.6ms | Allocations: 311)
+  Rendered layout layouts/mailer.html.erb (Duration: 5.3ms | Allocations: 554)
+WelcomeMailer#welcome_email: processed outbound mail in 29.5ms
+Delivered mail 6423e1132ea5b_ee9a26d4-4b2@jeff-HP-ProBook-440-G5.mail (2526.1ms)
+Date: Wed, 29 Mar 2023 09:56:19 +0300
+From: from@example.com
+To: jeffgichuki68@gmail.com
+Message-ID: <6423e1132ea5b_ee9a26d4-4b2@jeff-HP-ProBook-440-G5.mail>
+Subject: Welcome to My Site!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to My Site!</h1>
+<p>Thanks for signing up.</p>
+  </body>
+</html>
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.42ms)
+Completed 200 OK in 3124ms (Views: 4.6ms | ActiveRecord: 7.6ms | Allocations: 67181)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-03-29 10:17:47 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as */*
+  Parameters: {"name"=>"Jeff", "email"=>"jeffgichuki68@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Jeff", "email"=>"jeffgichuki68@gmail.com"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeffgichuki68@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 488ms (Views: 4.7ms | ActiveRecord: 3.6ms | Allocations: 37074)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2023-03-29 10:17:52 +0300
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"Jeff", "email"=>"jeffgichuki68@gmail.com", "password"=>"[FILTERED]", "task"=>{"name"=>"Jeff"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+[31mUnpermitted parameters: :email, :password, :task. Context: { controller: TasksController, action: create, request: #<ActionDispatch::Request:0x00007ff16400c708>, params: {"name"=>"Jeff", "email"=>"jeffgichuki68@gmail.com", "password"=>"[FILTERED]", "controller"=>"tasks", "action"=>"create", "task"=>{"name"=>"Jeff"}} }[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 140ms (Views: 1.0ms | ActiveRecord: 3.3ms | Allocations: 24289)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2023-03-29 10:18:00 +0300
+Processing by TasksController#index as */*
+  Parameters: {"name"=>"Jeff", "email"=>"jeffgichuki68@gmail.com", "password"=>"[FILTERED]", "task"=>{"name"=>"Jeff"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 200 OK in 38ms (Views: 27.3ms | ActiveRecord: 0.6ms | Allocations: 4055)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2023-03-29 10:21:05 +0300
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"Jeff", "description"=>"Random task description", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1, "task"=>{"name"=>"Jeff", "description"=>"Random task description", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+[31mUnpermitted parameter: :task. Context: { controller: TasksController, action: create, request: #<ActionDispatch::Request:0x00007ff174e2a618>, params: {"name"=>"Jeff", "description"=>"Random task description", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1, "controller"=>"tasks", "action"=>"create", "task"=>{"name"=>"Jeff", "description"=>"Random task description", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+  [1m[36mTask Create (1.9ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jeff"], ["description", "Random task description"], ["due_date", "2022-12-12"], ["completed", 1], ["project_id", 1], ["user_id", 9], ["created_at", "2023-03-29 07:21:05.865647"], ["updated_at", "2023-03-29 07:21:05.865647"]]
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (3.85ms)
+Completed 201 Created in 118ms (Views: 24.4ms | ActiveRecord: 14.9ms | Allocations: 16687)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2023-03-29 10:21:14 +0300
+Processing by TasksController#index as */*
+  Parameters: {"name"=>"Jeff", "description"=>"Random task description", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1, "task"=>{"name"=>"Jeff", "description"=>"Random task description", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.91ms)
+Completed 200 OK in 27ms (Views: 20.0ms | ActiveRecord: 1.6ms | Allocations: 2897)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2023-03-29 10:21:39 +0300
+Processing by TasksController#show as */*
+  Parameters: {"name"=>"Jeff", "description"=>"Random task description", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1, "id"=>"1", "task"=>{"name"=>"Jeff", "description"=>"Random task description", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.3ms | Allocations: 2909)
+
+
+  
+NoMethodError (undefined method `task' for #<User:0x00007ff170b4ec18>
+Did you mean?  tasks):
+  
+app/controllers/tasks_controller.rb:10:in `show'
+Started GET "/tasks/1" for 127.0.0.1 at 2023-03-29 10:21:46 +0300
+Processing by TasksController#show as */*
+  Parameters: {"name"=>"Jeff", "description"=>"Random task description", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1, "id"=>"1", "task"=>{"name"=>"Jeff", "description"=>"Random task description", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 9], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:12:in `show'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (23.18ms)
+Completed 302 Found in 66ms (Views: 24.4ms | ActiveRecord: 6.4ms | Allocations: 13114)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2023-03-29 10:21:51 +0300
+Processing by TasksController#show as */*
+  Parameters: {"name"=>"Jeff", "description"=>"Random task description", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1, "id"=>"2", "task"=>{"name"=>"Jeff", "description"=>"Random task description", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 9], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:10:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 404 Not Found in 28ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 1503)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2023-03-29 10:21:53 +0300
+Processing by TasksController#show as */*
+  Parameters: {"name"=>"Jeff", "description"=>"Random task description", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1, "id"=>"1", "task"=>{"name"=>"Jeff", "description"=>"Random task description", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 9], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:12:in `show'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (7.07ms)
+Completed 302 Found in 19ms (Views: 8.3ms | ActiveRecord: 1.0ms | Allocations: 2518)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2023-03-29 10:22:11 +0300
+Processing by TasksController#show as */*
+  Parameters: {"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1, "id"=>"1", "task"=>{"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 9], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:12:in `show'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (8.53ms)
+Completed 302 Found in 20ms (Views: 9.2ms | ActiveRecord: 1.3ms | Allocations: 2511)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2023-03-29 10:22:41 +0300
+Processing by TasksController#show as */*
+  Parameters: {"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1, "id"=>"1", "task"=>{"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 9], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:12:in `show'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (27.04ms)
+Completed 302 Found in 69ms (Views: 28.5ms | ActiveRecord: 7.0ms | Allocations: 13183)
+
+
+Started PUT "/tasks/1" for 127.0.0.1 at 2023-03-29 10:23:36 +0300
+Processing by TasksController#update as */*
+  Parameters: {"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1, "id"=>"1", "task"=>{"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 9], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:28:in `update'
+[31mUnpermitted parameters: :id, :task. Context: { controller: TasksController, action: update, request: #<ActionDispatch::Request:0x00007ff174420af0>, params: {"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1, "controller"=>"tasks", "action"=>"update", "id"=>"1", "task"=>{"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:28:in `update'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:28:in `update'
+  [1m[36mTask Update (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "description" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["description", "Random task description update"], ["updated_at", "2023-03-29 07:23:36.505363"], ["id", 1]]
+  ↳ app/controllers/tasks_controller.rb:28:in `update'
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:28:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 54ms (Views: 1.6ms | ActiveRecord: 6.4ms | Allocations: 4455)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2023-03-29 10:23:43 +0300
+Processing by TasksController#show as */*
+  Parameters: {"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1, "id"=>"1", "task"=>{"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 9], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/tasks_controller.rb:12:in `show'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (14.1ms)
+Completed 302 Found in 30ms (Views: 16.8ms | ActiveRecord: 1.0ms | Allocations: 2496)
+
+
+Started DELETE "/tasks/1" for 127.0.0.1 at 2023-03-29 10:23:52 +0300
+Processing by TasksController#destroy as */*
+  Parameters: {"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1, "id"=>"1", "task"=>{"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.2ms | Allocations: 2898)
+
+
+  
+NoMethodError (undefined method `task' for #<User:0x00007ff174927dc8>
+Did you mean?  tasks):
+  
+app/controllers/tasks_controller.rb:37:in `destroy'
+Started DELETE "/tasks/1" for 127.0.0.1 at 2023-03-29 10:23:57 +0300
+Processing by TasksController#destroy as */*
+  Parameters: {"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1, "id"=>"1", "task"=>{"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 9], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:37:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:38:in `destroy'
+  [1m[36mTask Destroy (1.6ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/tasks_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:38:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.55ms)
+Completed 200 OK in 126ms (Views: 3.3ms | ActiveRecord: 13.1ms | Allocations: 10471)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2023-03-29 10:24:03 +0300
+Processing by TasksController#show as */*
+  Parameters: {"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1, "id"=>"1", "task"=>{"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 9], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:10:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.34ms)
+Completed 404 Not Found in 13ms (Views: 1.7ms | ActiveRecord: 1.1ms | Allocations: 1404)
+
+
+Started POST "/tasks/1" for 127.0.0.1 at 2023-03-29 10:24:10 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/tasks/1"):
+  
+Started POST "/tasks" for 127.0.0.1 at 2023-03-29 10:24:17 +0300
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1, "task"=>{"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `user'
+[31mUnpermitted parameter: :task. Context: { controller: TasksController, action: create, request: #<ActionDispatch::Request:0x00007ff15c093fa8>, params: {"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1, "controller"=>"tasks", "action"=>"create", "task"=>{"name"=>"Jeff", "description"=>"Random task description update", "due_date"=>"12-12-2022", "completed"=>true, "project_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+  [1m[36mTask Create (0.7ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jeff"], ["description", "Random task description update"], ["due_date", "2022-12-12"], ["completed", 1], ["project_id", 1], ["user_id", 9], ["created_at", "2023-03-29 07:24:17.266016"], ["updated_at", "2023-03-29 07:24:17.266016"]]
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (2.72ms)
+Completed 201 Created in 55ms (Views: 7.6ms | ActiveRecord: 8.8ms | Allocations: 7029)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 10:39:20 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Jeff", "email"=>"shadrackmungai10@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Jeff", "email"=>"shadrackmungai10@gmail.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007ff15800c8e0>, params: {"name"=>"Jeff", "email"=>"shadrackmungai10@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"Jeff", "email"=>"shadrackmungai10@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "shadrackmungai10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jeff"], ["email", "shadrackmungai10@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 07:39:20.518333"], ["updated_at", "2023-03-29 07:39:20.518333"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "shadrackmungai10@gmail.com"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (Duration: 2.0ms | Allocations: 311)
+  Rendered layout layouts/mailer.html.erb (Duration: 4.0ms | Allocations: 554)
+WelcomeMailer#welcome_email: processed outbound mail in 36.3ms
+Delivered mail 6423eb289ec36_f5c1272466640@jeff-HP-ProBook-440-G5.mail (2676.7ms)
+Date: Wed, 29 Mar 2023 10:39:20 +0300
+From: from@example.com
+To: shadrackmungai10@gmail.com
+Message-ID: <6423eb289ec36_f5c1272466640@jeff-HP-ProBook-440-G5.mail>
+Subject: Welcome to My Site!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to My Site!</h1>
+<p>Thanks for signing up.</p>
+  </body>
+</html>
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (1.28ms)
+Completed 200 OK in 3207ms (Views: 6.3ms | ActiveRecord: 7.6ms | Allocations: 50272)
+
+
+Started POST "/password/reset" for 127.0.0.1 at 2023-03-29 13:45:25 +0300
+  
+SyntaxError (/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/controllers/password_reset_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+... redirect_to_root_path, notice: 'some message'
+...                        ^~~~~~~
+/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/controllers/password_reset_controller.rb:38: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/password_reset_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+app/controllers/password_reset_controller.rb:38: syntax error, unexpected `end', expecting end-of-input
+app/controllers/password_reset_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+app/controllers/password_reset_controller.rb:38: syntax error, unexpected `end', expecting end-of-input
+Started POST "/password/reset" for 127.0.0.1 at 2023-03-29 13:46:05 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/jeff/Development/code/Phase4/Project/phase-4-project-taskmaster-app/task_manager/app/controllers/password_reset_controller.rb:40: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/password_reset_controller.rb:40: syntax error, unexpected `end', expecting end-of-input
+app/controllers/password_reset_controller.rb:40: syntax error, unexpected `end', expecting end-of-input

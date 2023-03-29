@@ -1,11 +1,9 @@
-class SessionController < ApplicationController
+class SessionsController < ApplicationController
 
-    def create
-        user = User.find_by(email: params[:email])
-    
-        if user && user.authenticate(params[:password])
+    def create    
+        if current_user && current_user.authenticate(params[:password])
           session[:user_id] = user.id
-          render json: { user: user }, status: :ok
+          render json: { message: "Login successfull", user: user }, status: :ok
         else
           render json: { errors: { invalid: ["credentials"] } }, status: :unprocessable_entity
         end
