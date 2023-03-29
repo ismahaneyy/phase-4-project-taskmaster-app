@@ -1,11 +1,6 @@
-class UserController < ApplicationController
-    before_action :set_user, only: [show update destroy]
+class UsersController < ApplicationController
+    before_action :set_user, only: [:show, :update, :destroy]
     skip_before_action :authenticate_user!, only: :create
-  
-    def index
-      users = User.all
-      render json: users
-    end
   
     def show
       render json: @user
@@ -15,7 +10,6 @@ class UserController < ApplicationController
       user = User.new(user_params)
       if user.save
         session[:user_id] = user.id
-  
         render json: user, status: :created
       else
         render json: { error: user.errors.full_messages }, status: :unprocessable_entity
@@ -42,7 +36,7 @@ class UserController < ApplicationController
     end
   
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      params.permit(:name, :email, :password)
     end
 
 end

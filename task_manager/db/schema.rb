@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_28_081836) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_29_143651) do
   create_table "password_resets", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "token"
@@ -50,6 +50,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_28_081836) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "authentication_token"
   end
 
   add_foreign_key "password_resets", "users"

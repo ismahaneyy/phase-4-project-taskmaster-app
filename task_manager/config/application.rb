@@ -2,6 +2,7 @@ require_relative "boot"
 
 require "rails/all"
 
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -9,8 +10,13 @@ Bundler.require(*Rails.groups)
 module TaskManager
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.middleware.use ActionDispatch::Session::CookieStore
+
     config.load_defaults 7.0
 
+    config.session_store :cookie_store, key: '_your_app_session'
+
+    
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

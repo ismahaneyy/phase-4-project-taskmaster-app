@@ -3,7 +3,5 @@ class Project < ApplicationRecord
   has_many :tasks 
 
   validates :name, presence: true 
-  validates :duedate, presence: true 
-  
-  
+  validates :due_date, presence: true 
 end

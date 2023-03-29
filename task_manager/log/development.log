@@ -42,3 +42,1735 @@ FOREIGN KEY ("user_id")
   [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-28 08:32:31.407860"], ["updated_at", "2023-03-28 08:32:31.407860"]]
   [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeff@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jeff"], ["email", "jeff@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 12:23:01.096791"], ["updated_at", "2023-03-29 12:23:01.096791"]]
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ismahan@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ismahan"], ["email", "ismahan@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 12:23:01.347106"], ["updated_at", "2023-03-29 12:23:01.347106"]]
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeff@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ismahan@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeff@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ismahan@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeff@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ismahan@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeff@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ismahan@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 15:45:37 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UsersController
+Did you mean?  UserController):
+  
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 15:45:52 +0300
+  
+SyntaxError (/home/ismahan/Development/code/phase-4/phase-4-project-taskmaster-app/task_manager/app/controllers/user_controller.rb:2: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+...n :set_user, only: [show update destroy]
+...                         ^~~~~~
+):
+  
+app/controllers/user_controller.rb:2: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/controllers/user_controller.rb:2: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 15:46:59 +0300
+Processing by UserController#create as */*
+  Parameters: {"name"=>"jeff", "email"=>"example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"jeff", "email"=>"example@gmail.com"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/user_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 92ms (Views: 0.4ms | ActiveRecord: 3.3ms | Allocations: 42813)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 15:47:19 +0300
+Processing by UserController#create as */*
+  Parameters: {"name"=>"jeff", "email"=>"example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"jeff", "email"=>"example@gmail.com"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/user_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 2844)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-29 15:48:36 +0300
+Processing by UserController#create as */*
+  Parameters: {"name"=>"jeff", "email"=>"example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"jeff", "email"=>"example@gmail.com"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/user_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 12ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 4038)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-29 15:49:21 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController
+Did you mean?  UserController):
+  
+Started GET "/users" for 127.0.0.1 at 2023-03-29 15:49:46 +0300
+Processing by UsersController#index as */*
+  Parameters: {"name"=>"jeff", "email"=>"example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"jeff", "email"=>"example@gmail.com"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.8ms | Allocations: 728)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.authentication_token):
+  
+app/controllers/application_controller.rb:14:in `current_user'
+app/controllers/application_controller.rb:8:in `authenticate_user!'
+Started GET "/users" for 127.0.0.1 at 2023-03-29 15:50:13 +0300
+Processing by UsersController#index as */*
+  Parameters: {"name"=>"jeff", "email"=>"example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"jeff", "email"=>"example@gmail.com"}}
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 2.4ms | Allocations: 146)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-29 15:55:03 +0300
+Processing by UsersController#index as */*
+  Parameters: {"name"=>"jeff", "email"=>"example@gmail.com", "password"=>"[FILTERED]", "user"=>{"name"=>"jeff", "email"=>"example@gmail.com"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.6ms | Allocations: 704)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.authentication_token):
+  
+app/controllers/application_controller.rb:16:in `current_user'
+app/controllers/application_controller.rb:10:in `authenticate_user!'
+Started GET "/users" for 127.0.0.1 at 2023-03-29 17:35:20 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.0ms | Allocations: 6489)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.authentication_token):
+  
+app/controllers/application_controller.rb:16:in `current_user'
+app/controllers/application_controller.rb:10:in `authenticate_user!'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAuthenticationTokenToUsers (20230329143651)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "authentication_token" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230329143651"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users" for 127.0.0.1 at 2023-03-29 17:37:12 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 65ms (Views: 2.8ms | ActiveRecord: 2.1ms | Allocations: 41892)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2023-03-29 17:37:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1"):
+  
+Started GET "/users/" for 127.0.0.1 at 2023-03-29 17:37:30 +0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1425)
+
+
+Started GET "/user/" for 127.0.0.1 at 2023-03-29 17:37:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+Started GET "/user/1" for 127.0.0.1 at 2023-03-29 17:37:59 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/1"):
+  
+Started GET "/users/1" for 127.0.0.1 at 2023-03-29 17:38:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1"):
+  
+Started GET "/users/1" for 127.0.0.1 at 2023-03-29 17:40:03 +0300
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `set_user'
+Completed 200 OK in 26ms (Views: 0.8ms | ActiveRecord: 2.3ms | Allocations: 7407)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2023-03-29 17:40:19 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+Completed 404 Not Found in 27ms (ActiveRecord: 1.4ms | Allocations: 8311)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=1 [WHERE "projects"."user_id" = ?]):
+  
+app/controllers/projects_controller.rb:39:in `set_project'
+Started GET "/projects/" for 127.0.0.1 at 2023-03-29 17:41:04 +0300
+Processing by ProjectsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 2006)
+
+
+Started GET "/users/projects/" for 127.0.0.1 at 2023-03-29 17:41:18 +0300
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"projects"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `set_user'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.4ms | Allocations: 1050)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=projects):
+  
+app/controllers/users_controller.rb:40:in `set_user'
+Started GET "/projects/" for 127.0.0.1 at 2023-03-29 17:42:02 +0300
+Processing by ProjectsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1777)
+
+
+Started GET "/projects" for 127.0.0.1 at 2023-03-29 17:45:01 +0300
+Processing by ProjectsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1779)
+
+
+Started POST "/projects" for 127.0.0.1 at 2023-03-29 17:45:46 +0300
+Processing by ProjectsController#create as */*
+  Parameters: {"project"=>{"name"=>"My Project", "description"=>"This is my project", "due_date"=>"2023-04-05", "completed"=>false, "user_id"=>1}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+[31mUnpermitted parameter: :user_id. Context: { controller: ProjectsController, action: create, request: #<ActionDispatch::Request:0x00007f4858b41d68>, params: {"project"=>{"name"=>"My Project", "description"=>"This is my project", "due_date"=>"2023-04-05", "completed"=>false, "user_id"=>1}, "controller"=>"projects", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:12:in `create'
+  [1m[36mProject Create (0.5ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "My Project"], ["description", "This is my project"], ["due_date", "2023-04-05"], ["user_id", 1], ["completed", 0], ["created_at", "2023-03-29 14:45:46.199106"], ["updated_at", "2023-03-29 14:45:46.199106"]]
+  ↳ app/controllers/projects_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:12:in `create'
+Completed 201 Created in 42ms (Views: 0.5ms | ActiveRecord: 4.8ms | Allocations: 19796)
+
+
+Started DELETE "/projects/3" for 127.0.0.1 at 2023-03-29 17:46:32 +0300
+Processing by ProjectsController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.4ms | Allocations: 1349)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=3 [WHERE "projects"."user_id" = ?]):
+  
+app/controllers/projects_controller.rb:39:in `set_project'
+Started DELETE "/projects/2" for 127.0.0.1 at 2023-03-29 17:46:37 +0300
+Processing by ProjectsController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.4ms | Allocations: 1349)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=2 [WHERE "projects"."user_id" = ?]):
+  
+app/controllers/projects_controller.rb:39:in `set_project'
+Started GET "/projects" for 127.0.0.1 at 2023-03-29 17:53:49 +0300
+Processing by ProjectsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 10.4ms | ActiveRecord: 0.9ms | Allocations: 2112)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2023-03-29 17:54:10 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.5ms | Allocations: 1385)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=2 [WHERE "projects"."user_id" = ?]):
+  
+app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAuthenticationTokenToUsers (20230329143651)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "authentication_token" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","name","email","password_digest","created_at","updated_at","authentication_token")
+                     SELECT "id","name","email","password_digest","created_at","updated_at","authentication_token" FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "users" ("id","name","email","password_digest","created_at","updated_at")
+                     SELECT "id","name","email","password_digest","created_at","updated_at" FROM "ausers"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20230329143651"]]
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAuthenticationTokenToUsers (20230329143651)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "authentication_token" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230329143651"]]
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Jeff@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jeff"], ["email", "Jeff@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 15:01:03.061406"], ["updated_at", "2023-03-29 15:01:03.061406"], ["authentication_token", "[FILTERED]"]]
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Ismahan@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ismahan"], ["email", "Ismahan@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 15:01:03.313460"], ["updated_at", "2023-03-29 15:01:03.313460"], ["authentication_token", "[FILTERED]"]]
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProject Create (0.2ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "First Project"], ["description", "Jeff's first project"], ["due_date", "2023-04-05"], ["user_id", 3], ["completed", 0], ["created_at", "2023-03-29 15:01:03.345731"], ["updated_at", "2023-03-29 15:01:03.345731"]]
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProject Create (0.2ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Second Project"], ["description", "Jeff's second project"], ["due_date", "2023-04-12"], ["user_id", 3], ["completed", 0], ["created_at", "2023-03-29 15:01:03.354291"], ["updated_at", "2023-03-29 15:01:03.354291"]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Create (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Third Project"], ["description", "Ismahan's first project"], ["due_date", "2023-04-19"], ["user_id", 4], ["completed", 0], ["created_at", "2023-03-29 15:01:03.364261"], ["updated_at", "2023-03-29 15:01:03.364261"]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Create (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fourth Project"], ["description", "Ismahan's second project"], ["due_date", "2023-04-26"], ["user_id", 4], ["completed", 0], ["created_at", "2023-03-29 15:01:03.375402"], ["updated_at", "2023-03-29 15:01:03.375402"]]
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/projects" for 127.0.0.1 at 2023-03-29 18:01:28 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 96ms (Views: 24.2ms | ActiveRecord: 2.8ms | Allocations: 64650)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2023-03-29 18:02:22 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.4ms | Allocations: 1420)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=2 [WHERE "projects"."user_id" = ?]):
+  
+app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20230328080631)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328080631"]]
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTasks (20230328080947)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "due_date" date, "completed" boolean, "project_id" integer NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_02e851e3b7"
+FOREIGN KEY ("project_id")
+  REFERENCES "projects" ("id")
+, CONSTRAINT "fk_rails_4d2a9e4d7e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_project_id" ON "tasks" ("project_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_user_id" ON "tasks" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328080947"]]
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProjects (20230328081438)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "due_date" date, "user_id" integer NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_b872a6760a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_projects_on_user_id" ON "projects" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328081438"]]
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePasswordResets (20230328081836)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "password_resets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "token" varchar, "expires_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_526379cd99"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_password_resets_on_user_id" ON "password_resets" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328081836"]]
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAuthenticationTokenToUsers (20230329143651)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD "authentication_token" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230329143651"]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-29 15:03:34.660128"], ["updated_at", "2023-03-29 15:03:34.660128"]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Jeff@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jeff"], ["email", "Jeff@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 15:03:43.768358"], ["updated_at", "2023-03-29 15:03:43.768358"], ["authentication_token", "[FILTERED]"]]
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Ismahan@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ismahan"], ["email", "Ismahan@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 15:03:44.025995"], ["updated_at", "2023-03-29 15:03:44.025995"], ["authentication_token", "[FILTERED]"]]
+  [1m[36mTRANSACTION (8.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Create (0.2ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "First Project"], ["description", "Jeff's first project"], ["due_date", "2023-04-05"], ["user_id", 1], ["completed", 0], ["created_at", "2023-03-29 15:03:44.061509"], ["updated_at", "2023-03-29 15:03:44.061509"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Create (0.2ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Second Project"], ["description", "Jeff's second project"], ["due_date", "2023-04-12"], ["user_id", 1], ["completed", 0], ["created_at", "2023-03-29 15:03:44.069808"], ["updated_at", "2023-03-29 15:03:44.069808"]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Third Project"], ["description", "Ismahan's first project"], ["due_date", "2023-04-19"], ["user_id", 2], ["completed", 0], ["created_at", "2023-03-29 15:03:44.078144"], ["updated_at", "2023-03-29 15:03:44.078144"]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Create (0.2ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fourth Project"], ["description", "Ismahan's second project"], ["due_date", "2023-04-26"], ["user_id", 2], ["completed", 0], ["created_at", "2023-03-29 15:03:44.087004"], ["updated_at", "2023-03-29 15:03:44.087004"]]
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/projects" for 127.0.0.1 at 2023-03-29 18:04:45 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 106ms (Views: 29.4ms | ActiveRecord: 2.3ms | Allocations: 64777)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2023-03-29 18:05:02 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 2037)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2023-03-29 18:05:09 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.5ms | Allocations: 1370)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=3 [WHERE "projects"."user_id" = ?]):
+  
+app/controllers/projects_controller.rb:39:in `set_project'
+Started GET "/projects/1" for 127.0.0.1 at 2023-03-29 18:05:14 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1985)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2023-03-29 18:05:56 +0300
+Processing by ProjectsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 2076)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2023-03-29 18:06:45 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.4ms | Allocations: 1348)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=3 [WHERE "projects"."user_id" = ?]):
+  
+app/controllers/projects_controller.rb:39:in `set_project'
+Started GET "/users/2/projects" for 127.0.0.1 at 2023-03-29 18:08:37 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/2/projects"):
+  
+Started GET "/users/2/projects" for 127.0.0.1 at 2023-03-29 18:11:04 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 43ms (Views: 13.2ms | ActiveRecord: 3.2ms | Allocations: 13031)
+
+
+Started GET "/users/3/projects" for 127.0.0.1 at 2023-03-29 18:11:14 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 2056)
+
+
+Started GET "/users/4/projects" for 127.0.0.1 at 2023-03-29 18:11:23 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 2055)
+
+
+Started GET "/users/1/projects" for 127.0.0.1 at 2023-03-29 18:11:34 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 2056)
+
+
+Started GET "/users/2/projects" for 127.0.0.1 at 2023-03-29 18:12:04 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 47ms (Views: 9.4ms | ActiveRecord: 3.1ms | Allocations: 12990)
+
+
+Started GET "/users/4/projects" for 127.0.0.1 at 2023-03-29 18:12:14 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 2056)
+
+
+Started GET "/users/4/projects" for 127.0.0.1 at 2023-03-29 18:12:40 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 2055)
+
+
+Started GET "/users/2/projects" for 127.0.0.1 at 2023-03-29 18:16:45 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 101ms (Views: 22.7ms | ActiveRecord: 2.6ms | Allocations: 64777)
+
+
+Started GET "/users/3/projects" for 127.0.0.1 at 2023-03-29 18:16:51 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 2075)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2023-03-29 18:18:18 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 2037)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2023-03-29 18:18:23 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.4ms | Allocations: 1354)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=3 [WHERE "projects"."user_id" = ?]):
+  
+app/controllers/projects_controller.rb:39:in `set_project'
+Started DELETE "/users/2/projects/" for 127.0.0.1 at 2023-03-29 18:18:56 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/users/2/projects"):
+  
+Started GET "/users/2/projects/" for 127.0.0.1 at 2023-03-29 18:19:09 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 2074)
+
+
+Started GET "/users/3/projects/" for 127.0.0.1 at 2023-03-29 18:19:15 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 2075)
+
+
+Started GET "/users/6/projects/" for 127.0.0.1 at 2023-03-29 18:19:21 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 2056)
+
+
+Started GET "/users/projects/" for 127.0.0.1 at 2023-03-29 18:19:33 +0300
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"projects"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `set_user'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms | Allocations: 1201)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=projects):
+  
+app/controllers/users_controller.rb:40:in `set_user'
+Started GET "/projects/2" for 127.0.0.1 at 2023-03-29 18:26:10 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 34ms (Views: 0.6ms | ActiveRecord: 1.0ms | Allocations: 11945)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2023-03-29 18:26:30 +0300
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `set_user'
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 1342)
+
+
+Started POST "/users/" for 127.0.0.1 at 2023-03-29 18:27:59 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"sham", "email"=>"sham@example.com", "password_digest"=>"[FILTERED]", "user"=>{"name"=>"sham", "email"=>"sham@example.com", "password_digest"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :password_digest, :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f9784743ee8>, params: {"name"=>"sham", "email"=>"sham@example.com", "password_digest"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"sham", "email"=>"sham@example.com", "password_digest"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sham@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 17ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 4671)
+
+
+Started POST "/users/" for 127.0.0.1 at 2023-03-29 18:35:56 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"sham", "email"=>"sham@example.com", "password_digest"=>"[FILTERED]", "user"=>{"name"=>"sham", "email"=>"sham@example.com", "password_digest"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :password_digest, :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00005568c7d2bda8>, params: {"name"=>"sham", "email"=>"sham@example.com", "password_digest"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"sham", "email"=>"sham@example.com", "password_digest"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sham@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 15ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 4701)
+
+
+Started POST "/users/" for 127.0.0.1 at 2023-03-29 18:38:17 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"sham", "email"=>"sham@example.com", "password"=>"[FILTERED]", "user"=>{"name"=>"sham", "email"=>"sham@example.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f9794f52cc8>, params: {"name"=>"sham", "email"=>"sham@example.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"sham", "email"=>"sham@example.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sham@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "sham"], ["email", "sham@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 15:38:17.909395"], ["updated_at", "2023-03-29 15:38:17.909395"], ["authentication_token", "[FILTERED]"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 339ms (ActiveRecord: 7.7ms | Allocations: 4950)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+app/controllers/users_controller.rb:17:in `create'
+Started POST "/users/" for 127.0.0.1 at 2023-03-29 18:39:23 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"sham", "email"=>"sham@example.com", "password"=>"[FILTERED]", "user"=>{"name"=>"sham", "email"=>"sham@example.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f754848e328>, params: {"name"=>"sham", "email"=>"sham@example.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"sham", "email"=>"sham@example.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sham@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 374ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 40485)
+
+
+Started POST "/users/" for 127.0.0.1 at 2023-03-29 18:39:35 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"sham", "email"=>"shamsa@example.com", "password"=>"[FILTERED]", "user"=>{"name"=>"sham", "email"=>"shamsa@example.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f7530010a20>, params: {"name"=>"sham", "email"=>"shamsa@example.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"sham", "email"=>"shamsa@example.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "shamsa@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "sham"], ["email", "shamsa@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 15:39:36.060878"], ["updated_at", "2023-03-29 15:39:36.060878"], ["authentication_token", "[FILTERED]"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 321ms (ActiveRecord: 7.9ms | Allocations: 3407)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+app/controllers/users_controller.rb:17:in `create'
+Started POST "/users/" for 127.0.0.1 at 2023-03-29 18:41:44 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"sham", "email"=>"shamsa@example.com", "password"=>"[FILTERED]", "user"=>{"name"=>"sham", "email"=>"shamsa@example.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f78acc290a8>, params: {"name"=>"sham", "email"=>"shamsa@example.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"sham", "email"=>"shamsa@example.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "shamsa@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 368ms (Views: 0.4ms | ActiveRecord: 1.5ms | Allocations: 40483)
+
+
+Started POST "/users/" for 127.0.0.1 at 2023-03-29 18:41:50 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"sham", "email"=>"shamssa@example.com", "password"=>"[FILTERED]", "user"=>{"name"=>"sham", "email"=>"shamssa@example.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f78a4011c78>, params: {"name"=>"sham", "email"=>"shamssa@example.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"sham", "email"=>"shamssa@example.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "shamssa@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "sham"], ["email", "shamssa@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 15:41:51.088350"], ["updated_at", "2023-03-29 15:41:51.088350"], ["authentication_token", "[FILTERED]"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 338ms (ActiveRecord: 8.8ms | Allocations: 3406)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+app/controllers/users_controller.rb:17:in `create'
+Started POST "/users/" for 127.0.0.1 at 2023-03-29 18:43:36 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"sham", "email"=>"shammssa@example.com", "password"=>"[FILTERED]", "user"=>{"name"=>"sham", "email"=>"shammssa@example.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f3c18c0b768>, params: {"name"=>"sham", "email"=>"shammssa@example.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"sham", "email"=>"shammssa@example.com"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "shammssa@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "sham"], ["email", "shammssa@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 15:43:36.966671"], ["updated_at", "2023-03-29 15:43:36.966671"], ["authentication_token", "[FILTERED]"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 350ms (ActiveRecord: 6.6ms | Allocations: 40065)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+app/controllers/users_controller.rb:17:in `create'
+Started POST "/users/" for 127.0.0.1 at 2023-03-29 18:47:04 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"sham", "email"=>"shammssa@example.com", "password"=>"[FILTERED]", "user"=>{"name"=>"sham", "email"=>"shammssa@example.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fb0e8b34ca0>, params: {"name"=>"sham", "email"=>"shammssa@example.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"sham", "email"=>"shammssa@example.com"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "shammssa@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 371ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 40494)
+
+
+Started POST "/users/" for 127.0.0.1 at 2023-03-29 18:47:09 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"sham", "email"=>"shammmssa@example.com", "password"=>"[FILTERED]", "user"=>{"name"=>"sham", "email"=>"shammmssa@example.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x000055c32bb060c8>, params: {"name"=>"sham", "email"=>"shammmssa@example.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"sham", "email"=>"shammmssa@example.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "shammmssa@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "sham"], ["email", "shammmssa@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 15:47:10.291810"], ["updated_at", "2023-03-29 15:47:10.291810"], ["authentication_token", "[FILTERED]"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (9.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 201 Created in 340ms (Views: 0.4ms | ActiveRecord: 10.5ms | Allocations: 3022)
+
+
+Started POST "/users/" for 127.0.0.1 at 2023-03-29 18:47:48 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"asmaa", "email"=>"asmaa@example.com", "password"=>"[FILTERED]", "user"=>{"name"=>"asmaa", "email"=>"asmaa@example.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fb0f4010138>, params: {"name"=>"asmaa", "email"=>"asmaa@example.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"asmaa", "email"=>"asmaa@example.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asmaa@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "asmaa"], ["email", "asmaa@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 15:47:49.151714"], ["updated_at", "2023-03-29 15:47:49.151714"], ["authentication_token", "[FILTERED]"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 201 Created in 326ms (Views: 0.4ms | ActiveRecord: 8.5ms | Allocations: 2805)
+
+
+Started GET "/users/2/projects" for 127.0.0.1 at 2023-03-29 18:48:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/2/projects"):
+  
+Started GET "/projects?user_id=2" for 127.0.0.1 at 2023-03-29 19:36:12 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"name"=>"asmaa", "email"=>"asmaa@example.com", "password"=>"[FILTERED]", "user_id"=>"2", "project"=>{"name"=>"asmaa"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 50ms (Views: 40.7ms | ActiveRecord: 1.8ms | Allocations: 20937)
+
+
+Started GET "/projects?user_id=3" for 127.0.0.1 at 2023-03-29 19:36:20 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"name"=>"asmaa", "email"=>"asmaa@example.com", "password"=>"[FILTERED]", "user_id"=>"3", "project"=>{"name"=>"asmaa"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 2062)
+
+
+Started GET "/projects?user_id=%3C2%3E" for 127.0.0.1 at 2023-03-29 19:36:35 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"name"=>"asmaa", "email"=>"asmaa@example.com", "password"=>"[FILTERED]", "user_id"=>"<2>", "project"=>{"name"=>"asmaa"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 2064)
+
+
+Started GET "/projects?user_id=%3C2%3E" for 127.0.0.1 at 2023-03-29 19:38:12 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as */*
+  Parameters: {"name"=>"asmaa", "email"=>"asmaa@example.com", "password"=>"[FILTERED]", "user_id"=>"<2>", "project"=>{"name"=>"asmaa"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 204 No Content in 47ms (ActiveRecord: 2.5ms | Allocations: 39851)
+
+
+Started GET "/projects?user_id=%3C1%3E" for 127.0.0.1 at 2023-03-29 19:38:24 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"name"=>"asmaa", "email"=>"asmaa@example.com", "password"=>"[FILTERED]", "user_id"=>"<1>", "project"=>{"name"=>"asmaa"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `index'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.5ms | Allocations: 1233)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=<1>):
+  
+app/controllers/projects_controller.rb:8:in `index'
+Started GET "/projects" for 127.0.0.1 at 2023-03-29 19:38:32 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"name"=>"asmaa", "email"=>"asmaa@example.com", "password"=>"[FILTERED]", "project"=>{"name"=>"asmaa"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:10:in `index'
+Completed 200 OK in 51ms (Views: 41.2ms | ActiveRecord: 1.1ms | Allocations: 20878)
+
+
+Started GET "/projects?user_id=%3C2%3E" for 127.0.0.1 at 2023-03-29 19:38:43 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"name"=>"asmaa", "email"=>"asmaa@example.com", "password"=>"[FILTERED]", "user_id"=>"<2>", "project"=>{"name"=>"asmaa"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `index'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.3ms | Allocations: 1070)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=<2>):
+  
+app/controllers/projects_controller.rb:8:in `index'
+Started GET "/projects?user_id=2" for 127.0.0.1 at 2023-03-29 19:38:56 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"name"=>"asmaa", "email"=>"asmaa@example.com", "password"=>"[FILTERED]", "user_id"=>"2", "project"=>{"name"=>"asmaa"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `index'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/projects_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 1989)
+
+
+Started GET "/users/1/projects/1" for 127.0.0.1 at 2023-03-29 20:03:23 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/projects/1"):
+  
+Started GET "/users/1/projects/1" for 127.0.0.1 at 2023-03-29 20:03:39 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/projects/1"):
+  
+Started GET "/users/1/projects/1" for 127.0.0.1 at 2023-03-29 21:56:23 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/projects/1"):
+  
+Started GET "/projects?user_id=2" for 127.0.0.1 at 2023-03-29 21:56:35 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `index'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/projects_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 4.0ms | ActiveRecord: 1.3ms | Allocations: 2191)
+
+
+Started GET "/projects/1?user_id=2" for 127.0.0.1 at 2023-03-29 21:56:47 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:46:in `set_project'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 2018)
+
+
+Started GET "/projects/2?user_id=2" for 127.0.0.1 at 2023-03-29 21:56:58 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:46:in `set_project'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 10ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 1973)
+
+
+Started GET "/projects/2?user_id=1" for 127.0.0.1 at 2023-03-29 21:57:09 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:46:in `set_project'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 1975)
+
+
+Started GET "/projects/2?user_id=2" for 127.0.0.1 at 2023-03-29 21:57:16 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:46:in `set_project'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1973)
+
+
+Started GET "/projects/1?user_id=2" for 127.0.0.1 at 2023-03-29 21:57:26 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:46:in `set_project'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1973)
+
+
+Started GET "/projects?user_id=2" for 127.0.0.1 at 2023-03-29 21:57:32 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `index'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/projects_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 0.6ms | Allocations: 1971)
+
+
+Started GET "/projects/3?user_id=2" for 127.0.0.1 at 2023-03-29 21:57:45 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:46:in `set_project'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.4ms | Allocations: 1355)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=3 [WHERE "projects"."user_id" = ?]):
+  
+app/controllers/projects_controller.rb:46:in `set_project'
+Started GET "/projects/2?user_id=2" for 127.0.0.1 at 2023-03-29 21:57:52 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:46:in `set_project'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 1971)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2023-03-29 22:07:25 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:46:in `set_project'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 1.1ms | Allocations: 2157)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2023-03-29 22:07:39 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:46:in `set_project'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1972)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2023-03-29 22:07:54 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:46:in `set_project'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.3ms | Allocations: 1354)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=3 [WHERE "projects"."user_id" = ?]):
+  
+app/controllers/projects_controller.rb:46:in `set_project'
+Started GET "/projects/2" for 127.0.0.1 at 2023-03-29 22:08:03 +0300
+Processing by ProjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:46:in `set_project'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 1971)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2023-03-29 22:11:11 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/projects/2"):
+  
+Started PUT "/projects/2" for 127.0.0.1 at 2023-03-29 22:14:36 +0300
+Processing by ProjectsController#update as */*
+  Parameters: {"project"=>{"name"=>"Updated Project Name", "description"=>"This is the updated project description", "due_date"=>"2023-05-01", "completed"=>true}, "id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:46:in `set_project'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:31:in `update'
+  [1m[36mProject Update (0.4ms)[0m  [1m[33mUPDATE "projects" SET "name" = ?, "description" = ?, "due_date" = ?, "completed" = ?, "updated_at" = ? WHERE "projects"."id" = ?[0m  [["name", "Updated Project Name"], ["description", "This is the updated project description"], ["due_date", "2023-05-01"], ["completed", 1], ["updated_at", "2023-03-29 19:14:36.167386"], ["id", 2]]
+  ↳ app/controllers/projects_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:31:in `update'
+Completed 200 OK in 45ms (Views: 0.6ms | ActiveRecord: 8.3ms | Allocations: 12174)
+
+
+Started PUT "/projects/3" for 127.0.0.1 at 2023-03-29 22:15:56 +0300
+Processing by ProjectsController#update as */*
+  Parameters: {"project"=>{"name"=>"Updated Third Project", "description"=>"This is the third updated project description", "due_date"=>"2023-07-01", "completed"=>true}, "id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:46:in `set_project'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.4ms | Allocations: 1354)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=3 [WHERE "projects"."user_id" = ?]):
+  
+app/controllers/projects_controller.rb:46:in `set_project'
+Started PUT "/projects?user_id=2" for 127.0.0.1 at 2023-03-29 22:21:44 +0300
+  
+ActionController::RoutingError (No route matches [PUT] "/projects"):
+  
+Started GET "/projects?user_id=2" for 127.0.0.1 at 2023-03-29 22:21:50 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `index'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/projects_controller.rb:8:in `index'
+Completed 200 OK in 60ms (Views: 18.9ms | ActiveRecord: 1.2ms | Allocations: 12174)
+
+
+Started GET "/projects/2?user_id=2" for 127.0.0.1 at 2023-03-29 22:22:07 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/projects/2"):
+  
+Started GET "/projects=2?user_id=2" for 127.0.0.1 at 2023-03-29 22:22:27 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/projects=2"):
+  
+Started GET "/projects?/2/user_id=2" for 127.0.0.1 at 2023-03-29 22:22:37 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"/2/user_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:10:in `index'
+Completed 200 OK in 15ms (Views: 6.9ms | ActiveRecord: 0.5ms | Allocations: 2072)
+
+
+Started GET "/projects?/user_id=2" for 127.0.0.1 at 2023-03-29 22:22:48 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"/user_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:10:in `index'
+Completed 200 OK in 13ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 2074)
+
+
+Started GET "/projects?user_id=2" for 127.0.0.1 at 2023-03-29 22:22:56 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `index'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/projects_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 0.7ms | Allocations: 1972)
+
+
+Started PUT "/projects/2" for 127.0.0.1 at 2023-03-29 22:38:22 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#update as */*
+  Parameters: {"project"=>{"name"=>"Updated third Project", "description"=>"This is the third updated project description", "due_date"=>"2023-09-01", "completed"=>true}, "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:24:in `update'
+  [1m[36mProject Update (0.4ms)[0m  [1m[33mUPDATE "projects" SET "name" = ?, "description" = ?, "due_date" = ?, "updated_at" = ? WHERE "projects"."id" = ?[0m  [["name", "Updated third Project"], ["description", "This is the third updated project description"], ["due_date", "2023-09-01"], ["updated_at", "2023-03-29 19:38:23.200570"], ["id", 2]]
+  ↳ app/controllers/projects_controller.rb:24:in `update'
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:24:in `update'
+Completed 200 OK in 160ms (Views: 0.7ms | ActiveRecord: 9.7ms | Allocations: 63779)
+
+
+Started PUT "/projects/3" for 127.0.0.1 at 2023-03-29 22:39:25 +0300
+Processing by ProjectsController#update as */*
+  Parameters: {"project"=>{"name"=>"Updated third.... Project", "description"=>"This is the third.... updated project description", "due_date"=>"2023-08-01", "completed"=>true}, "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+Completed 404 Not Found in 9ms (ActiveRecord: 0.5ms | Allocations: 1376)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=3 [WHERE "projects"."user_id" = ?]):
+  
+app/controllers/projects_controller.rb:39:in `set_project'
+Started PUT "/users/2/projects/1" for 127.0.0.1 at 2023-03-29 22:41:21 +0300
+  
+ActionController::RoutingError (No route matches [PUT] "/users/2/projects/1"):
+  
+Started PUT "/users/2/projects/1" for 127.0.0.1 at 2023-03-29 22:43:45 +0300
+Processing by ProjectsController#update as */*
+  Parameters: {"project"=>{"name"=>"Updated third.... Project", "description"=>"This is the third.... updated project description", "due_date"=>"2023-08-01", "completed"=>true}, "user_id"=>"2", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:24:in `update'
+  [1m[36mProject Update (0.6ms)[0m  [1m[33mUPDATE "projects" SET "name" = ?, "description" = ?, "due_date" = ?, "completed" = ?, "updated_at" = ? WHERE "projects"."id" = ?[0m  [["name", "Updated third.... Project"], ["description", "This is the third.... updated project description"], ["due_date", "2023-08-01"], ["completed", 1], ["updated_at", "2023-03-29 19:43:45.185221"], ["id", 1]]
+  ↳ app/controllers/projects_controller.rb:24:in `update'
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:24:in `update'
+Completed 200 OK in 68ms (Views: 0.9ms | ActiveRecord: 15.1ms | Allocations: 12021)
+
+
+Started PUT "/users/2/projects/1" for 127.0.0.1 at 2023-03-29 22:44:27 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#update as */*
+  Parameters: {"project"=>{"name"=>"Updated third.... Project", "description"=>"This is the third.... updated project description", "due_date"=>"2023-08-01", "completed"=>true}, "user_id"=>"2", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 136ms (Views: 0.7ms | ActiveRecord: 3.7ms | Allocations: 62192)
+
+
+Started PUT "/users/2/projects/2%20" for 127.0.0.1 at 2023-03-29 22:50:08 +0300
+Processing by ProjectsController#update as */*
+  Parameters: {"project"=>{"name"=>"Updated third.... Project", "description"=>"This is the third.... updated project description", "due_date"=>"2023-08-01", "completed"=>true}, "user_id"=>"2", "id"=>"2 "}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:24:in `update'
+  [1m[36mProject Update (0.8ms)[0m  [1m[33mUPDATE "projects" SET "name" = ?, "description" = ?, "due_date" = ?, "updated_at" = ? WHERE "projects"."id" = ?[0m  [["name", "Updated third.... Project"], ["description", "This is the third.... updated project description"], ["due_date", "2023-08-01"], ["updated_at", "2023-03-29 19:50:08.302168"], ["id", 2]]
+  ↳ app/controllers/projects_controller.rb:24:in `update'
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:24:in `update'
+Completed 200 OK in 34ms (Views: 4.8ms | ActiveRecord: 9.1ms | Allocations: 3799)
+
+
+Started PUT "/users/2/projects/2%20" for 127.0.0.1 at 2023-03-29 22:52:26 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#update as */*
+  Parameters: {"project"=>{"name"=>"Updated third.... Project", "description"=>"This is the third.... updated project description", "due_date"=>"2023-08-01", "completed"=>true}, "user_id"=>"2", "id"=>"2 "}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+Completed 404 Not Found in 55ms (ActiveRecord: 2.7ms | Allocations: 25957)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=2  [WHERE "projects"."user_id" = ?]):
+  
+app/controllers/projects_controller.rb:39:in `set_project'
+Started PUT "/users/2/projects/3" for 127.0.0.1 at 2023-03-29 22:53:25 +0300
+Processing by ProjectsController#update as */*
+  Parameters: {"project"=>{"name"=>"Updated third.... Project", "description"=>"This is the third.... updated project description", "due_date"=>"2023-08-01", "completed"=>true}, "user_id"=>"2", "id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:24:in `update'
+  [1m[36mProject Update (2.0ms)[0m  [1m[33mUPDATE "projects" SET "name" = ?, "description" = ?, "due_date" = ?, "completed" = ?, "updated_at" = ? WHERE "projects"."id" = ?[0m  [["name", "Updated third.... Project"], ["description", "This is the third.... updated project description"], ["due_date", "2023-08-01"], ["completed", 1], ["updated_at", "2023-03-29 19:53:25.227701"], ["id", 3]]
+  ↳ app/controllers/projects_controller.rb:24:in `update'
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:24:in `update'
+Completed 200 OK in 167ms (Views: 0.9ms | ActiveRecord: 12.8ms | Allocations: 37856)
+
+
+Started PUT "/users/2/projects/4" for 127.0.0.1 at 2023-03-29 22:55:03 +0300
+Processing by ProjectsController#update as */*
+  Parameters: {"project"=>{"name"=>"Ismahan's second updated project", "description"=>"My project is updated", "due_date"=>"2024-11-01", "completed"=>true}, "user_id"=>"2", "id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:24:in `update'
+  [1m[36mProject Update (0.5ms)[0m  [1m[33mUPDATE "projects" SET "name" = ?, "description" = ?, "due_date" = ?, "completed" = ?, "updated_at" = ? WHERE "projects"."id" = ?[0m  [["name", "Ismahan's second updated project"], ["description", "My project is updated"], ["due_date", "2024-11-01"], ["completed", 1], ["updated_at", "2023-03-29 19:55:03.170876"], ["id", 4]]
+  ↳ app/controllers/projects_controller.rb:24:in `update'
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:24:in `update'
+Completed 200 OK in 27ms (Views: 0.7ms | ActiveRecord: 9.2ms | Allocations: 3629)
+
+
+Started POST "/users/3/projects" for 127.0.0.1 at 2023-03-29 22:56:40 +0300
+Processing by ProjectsController#create as */*
+  Parameters: {"project"=>{"name"=>"Sham's first project", "description"=>"My first project", "due_date"=>"2024-11-01", "completed"=>false}, "user_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:16:in `create'
+  [1m[36mProject Create (0.6ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sham's first project"], ["description", "My first project"], ["due_date", "2024-11-01"], ["user_id", 1], ["completed", 0], ["created_at", "2023-03-29 19:56:40.582314"], ["updated_at", "2023-03-29 19:56:40.582314"]]
+  ↳ app/controllers/projects_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:16:in `create'
+Completed 201 Created in 24ms (Views: 0.8ms | ActiveRecord: 9.0ms | Allocations: 3200)
+
+
+Started DELETE "/users/2/projects/3" for 127.0.0.1 at 2023-03-29 22:59:38 +0300
+Processing by ProjectsController#destroy as */*
+  Parameters: {"user_id"=>"2", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:32:in `destroy'
+  [1m[36mProject Destroy (0.6ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/projects_controller.rb:32:in `destroy'
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:32:in `destroy'
+Completed 204 No Content in 24ms (ActiveRecord: 9.4ms | Allocations: 3031)
+
+
+Started DELETE "/users/1/projects/2" for 127.0.0.1 at 2023-03-29 23:01:07 +0300
+Processing by ProjectsController#destroy as */*
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `set_project'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:32:in `destroy'
+  [1m[36mProject Destroy (0.5ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/projects_controller.rb:32:in `destroy'
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:32:in `destroy'
+Completed 204 No Content in 25ms (ActiveRecord: 9.8ms | Allocations: 2994)
+
+
+Started DELETE "/users/8" for 127.0.0.1 at 2023-03-29 23:03:37 +0300
+Processing by UsersController#destroy as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `destroy'
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/users_controller.rb:33:in `destroy'
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `destroy'
+Completed 204 No Content in 17ms (ActiveRecord: 5.5ms | Allocations: 2337)
+
+
+Started DELETE "/users/7" for 127.0.0.1 at 2023-03-29 23:04:18 +0300
+Processing by UsersController#destroy as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `destroy'
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/users_controller.rb:33:in `destroy'
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `destroy'
+Completed 204 No Content in 23ms (ActiveRecord: 9.9ms | Allocations: 2295)
+
+
+Started DELETE "/users/6" for 127.0.0.1 at 2023-03-29 23:04:23 +0300
+Processing by UsersController#destroy as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `destroy'
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/users_controller.rb:33:in `destroy'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `destroy'
+Completed 204 No Content in 19ms (ActiveRecord: 8.7ms | Allocations: 2296)
+
+
+Started DELETE "/users/5" for 127.0.0.1 at 2023-03-29 23:04:27 +0300
+Processing by UsersController#destroy as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `destroy'
+  [1m[36mUser Destroy (1.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/users_controller.rb:33:in `destroy'
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `destroy'
+Completed 204 No Content in 22ms (ActiveRecord: 9.9ms | Allocations: 2295)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-29 23:06:15 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Sewe", "email"=>"sewe@example.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Sewe", "email"=>"sewe@example.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f6b60dbe700>, params: {"name"=>"Sewe", "email"=>"sewe@example.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"Sewe", "email"=>"sewe@example.com"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sewe@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sewe"], ["email", "sewe@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 20:06:15.884549"], ["updated_at", "2023-03-29 20:06:15.884549"], ["authentication_token", "[FILTERED]"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 201 Created in 529ms (Views: 0.8ms | ActiveRecord: 8.8ms | Allocations: 3288)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-29 23:13:14 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Ian", "email"=>"Ian@example.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Ian", "email"=>"Ian@example.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f2e9caf9570>, params: {"name"=>"Ian", "email"=>"Ian@example.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"Ian", "email"=>"Ian@example.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Ian@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ian"], ["email", "Ian@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 20:13:15.353227"], ["updated_at", "2023-03-29 20:13:15.353227"], ["authentication_token", "[FILTERED]"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+Completed 500 Internal Server Error in 340ms (ActiveRecord: 10.8ms | Allocations: 41748)
+
+
+  
+NoMethodError (undefined method `generate_authentication_token!' for #<User:0x00007f2ea8e382c0>):
+  
+app/controllers/users_controller.rb:19:in `create'
+Started POST "/users" for 127.0.0.1 at 2023-03-29 23:14:10 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Ian", "email"=>"Ian@example.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Ian", "email"=>"Ian@example.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f2e941277e8>, params: {"name"=>"Ian", "email"=>"Ian@example.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"Ian", "email"=>"Ian@example.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Ian@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 272ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 5735)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-29 23:14:18 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Ian", "email"=>"Ian2@example.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Ian", "email"=>"Ian2@example.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f2e9d0e7658>, params: {"name"=>"Ian", "email"=>"Ian2@example.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"Ian", "email"=>"Ian2@example.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Ian2@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ian"], ["email", "Ian2@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 20:14:18.906580"], ["updated_at", "2023-03-29 20:14:18.906580"], ["authentication_token", "[FILTERED]"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (11.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 201 Created in 277ms (Views: 0.5ms | ActiveRecord: 11.9ms | Allocations: 2910)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-29 23:19:11 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Asma", "email"=>"asma@example.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Asma", "email"=>"asma@example.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f2e9d073208>, params: {"name"=>"Asma", "email"=>"asma@example.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"Asma", "email"=>"asma@example.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asma@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Asma"], ["email", "asma@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 20:19:11.298284"], ["updated_at", "2023-03-29 20:19:11.298284"], ["authentication_token", "[FILTERED]"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 201 Created in 279ms (Views: 0.4ms | ActiveRecord: 7.8ms | Allocations: 2801)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-29 23:21:13 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Asmahan", "email"=>"asmahan@new.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Asmahan", "email"=>"asmahan@new.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f2e9cfd0a08>, params: {"name"=>"Asmahan", "email"=>"asmahan@new.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"Asmahan", "email"=>"asmahan@new.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asmahan@new.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Asmahan"], ["email", "asmahan@new.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-29 20:21:13.641036"], ["updated_at", "2023-03-29 20:21:13.641036"], ["authentication_token", "[FILTERED]"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 201 Created in 269ms (Views: 0.3ms | ActiveRecord: 7.5ms | Allocations: 2802)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2023-03-30 00:00:41 +0300
+Processing by UsersController#show as */*
+  Parameters: {"name"=>"Asmahan", "email"=>"asmahan@new.com", "password"=>"[FILTERED]", "id"=>"2", "user"=>{"name"=>"Asmahan", "email"=>"asmahan@new.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `set_user'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 1492)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2023-03-30 00:00:47 +0300
+Processing by UsersController#show as */*
+  Parameters: {"name"=>"Asmahan", "email"=>"asmahan@new.com", "password"=>"[FILTERED]", "id"=>"8", "user"=>{"name"=>"Asmahan", "email"=>"asmahan@new.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `set_user'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms | Allocations: 1042)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=8):
+  
+app/controllers/users_controller.rb:40:in `set_user'
+Started GET "/users/9" for 127.0.0.1 at 2023-03-30 00:00:52 +0300
+Processing by UsersController#show as */*
+  Parameters: {"name"=>"Asmahan", "email"=>"asmahan@new.com", "password"=>"[FILTERED]", "id"=>"9", "user"=>{"name"=>"Asmahan", "email"=>"asmahan@new.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `set_user'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1165)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-30 00:01:58 +0300
+Processing by UsersController#index as */*
+  Parameters: {"name"=>"Asmahan", "email"=>"asmahan@new.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Asmahan", "email"=>"asmahan@new.com"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 2316)
+
+
+Started PUT "/users" for 127.0.0.1 at 2023-03-30 00:36:42 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [PUT] "/users"):
+  
+Started PUT "/users/2" for 127.0.0.1 at 2023-03-30 00:36:52 +0300
+Processing by UsersController#update as */*
+  Parameters: {"name"=>"Fatuu", "email"=>"fatuuu@new.com", "password"=>"[FILTERED]", "id"=>"2", "user"=>{"name"=>"Fatuu", "email"=>"fatuuu@new.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `set_user'
+[31mUnpermitted parameters: :id, :user. Context: { controller: UsersController, action: update, request: #<ActionDispatch::Request:0x00007f7c9802a500>, params: {"name"=>"Fatuu", "email"=>"fatuuu@new.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"update", "id"=>"2", "user"=>{"name"=>"Fatuu", "email"=>"fatuuu@new.com"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "fatuuu@new.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "email" = ?, "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "Fatuu"], ["email", "fatuuu@new.com"], ["password_digest", "[FILTERED]"], ["updated_at", "2023-03-29 21:36:52.865285"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `update'
+Completed 200 OK in 324ms (Views: 0.5ms | ActiveRecord: 9.3ms | Allocations: 40901)
+
+
