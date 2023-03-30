@@ -4,6 +4,8 @@
 
 ### User
 
+#### Registering
+
     post  /signup
 
  A post request that saves the details of a new user to the database.It takes the following parameters:
@@ -25,7 +27,7 @@
     - The password **must** be provided for the request to succeed.
     - It should contain a minimum of six characters.
 
-##
+#### Logging in
 
     post /login
 
@@ -36,8 +38,8 @@ A post request that logs in a user.It accepts the following parameters;
 <i>The parameters above are subject to validations stated in the previous sign up section</i>
 
 ### Projects
-<br/>
-<br/>
+
+#### Retrieving all projects
 
     get  /user/projects
 
@@ -67,8 +69,8 @@ Returns an array of all the projects of a logged in user in the format below:
   }
 ]
 ```
-<br/>
-<br/>
+
+#### Creating a new project
 
     post '/user/projects'
 
@@ -83,14 +85,16 @@ Creates a new project for a logged in user. it takes in the following parameters
   - **completed**
     - Boolean
 
-<br/>
-<br/>
- 
+#### Updating a project
+
     put '/user/projects/:id
 
 Updates a user's specific project accepting the specified parameters above.
 <br/>
 <br/>
+
+#### Deleting a project
+
 
     delete '/user/projects/:id'
 
@@ -99,8 +103,8 @@ Deletes a user's specific project accepting the specified parameters above.
 <br/>
 
 ### Tasks
-<br/>
-<br/>
+
+#### Retrieving all tasks
 
 
     get "/projects/:project_id/tasks"
@@ -124,8 +128,8 @@ Returns an array of a logged in user's tasks:
   }
 ]
 ```
-<br/>
-<br/>
+#### Creating new tasks
+
 
     post "/projects/:project_id/tasks"
 
@@ -140,14 +144,13 @@ Creates a new task in a project for a logged in user.It takes in the following p
   - **completed**
     - Boolean
 
-<br/>
-<br/>
+#### Updating a task
 
     patch "/projects/:project_id/tasks/:id"
 
 Updates a user's specific project task accepting the specified parameters above.
-<br/>
-<br/>
+
+#### Deleting a task
 
     delete "/projects/:project_id/tasks/:id"
 
