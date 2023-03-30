@@ -1,8 +1,21 @@
 class ApplicationController < ActionController::API
+    include ActionController::Cookies
 
-    before_action :authenticate_user!
+    def save_user(id)
+        session[:user_id] = id
+    end
 
+    # delete user id in session
+    def remove_user
+        session.delete(:user_id)
+        render json: { message: "Logged out successfully"}
+    end
     
+    # get logged in user
+    def current_user
+        current_user = User.find_by(id: session[:user_id]) 
+    end
+
       
         private
       
@@ -10,10 +23,6 @@ class ApplicationController < ActionController::API
           if !current_user
             render json: { error: "You aren't signed in or signed up" }, status: :unauthorized
           end
-    end
-
-    def current_user
-        @current_user = User.find_by(authentication_token: request.headers['Authorization'])
     end
       
     
