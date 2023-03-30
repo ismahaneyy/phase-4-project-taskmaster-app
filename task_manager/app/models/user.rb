@@ -2,7 +2,7 @@ class User < ApplicationRecord
     
     has_secure_password
     has_many :tasks
-    has_many :projects
+    has_many :projects, dependent: :destroy
     has_many :password_reset 
 
     validates :name, presence: true
