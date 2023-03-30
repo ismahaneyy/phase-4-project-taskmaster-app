@@ -15902,3 +15902,173 @@ Content-Transfer-Encoding: 7bit
 Completed 200 OK in 3400ms (Views: 32.9ms | ActiveRecord: 10.3ms | Allocations: 94266)
 
 
+Started POST "/login" for 127.0.0.1 at 2023-03-30 20:18:35 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"example8@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example8@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (24.93ms)
+Completed 200 OK in 826ms (Views: 38.4ms | ActiveRecord: 14.2ms | Allocations: 2905)
+
+
+Started POST "/projects" for 127.0.0.1 at 2023-03-30 20:18:53 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/projects"):
+  
+Started GET "/user/projects" for 127.0.0.1 at 2023-03-30 20:19:14 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"email"=>"example8@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.9ms)
+Completed 200 OK in 403ms (Views: 173.7ms | ActiveRecord: 4.7ms | Allocations: 10842)
+
+
+Started POST "/user/projects" for 127.0.0.1 at 2023-03-30 20:19:41 +0300
+Processing by ProjectsController#create as */*
+  Parameters: {"name"=>"project one", "description"=>"project description", "due_date"=>"1-1-2022", "completed"=>"TRUE"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mProject Create (3.0ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project one"], ["description", "project description"], ["due_date", "2022-01-01"], ["user_id", 1], ["completed", 1], ["created_at", "2023-03-30 17:19:41.669207"], ["updated_at", "2023-03-30 17:19:41.669207"]]
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Project (2.03ms)
+Completed 201 Created in 280ms (Views: 19.5ms | ActiveRecord: 10.4ms | Allocations: 19313)
+
+
+Started POST "/user/projects" for 127.0.0.1 at 2023-03-30 20:19:42 +0300
+Processing by ProjectsController#create as */*
+  Parameters: {"name"=>"project one", "description"=>"project description", "due_date"=>"1-1-2022", "completed"=>"TRUE"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mProject Create (1.6ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project one"], ["description", "project description"], ["due_date", "2022-01-01"], ["user_id", 1], ["completed", 1], ["created_at", "2023-03-30 17:19:43.048584"], ["updated_at", "2023-03-30 17:19:43.048584"]]
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Project (2.74ms)
+Completed 201 Created in 96ms (Views: 24.1ms | ActiveRecord: 10.5ms | Allocations: 3625)
+
+
+Started POST "/user/projects" for 127.0.0.1 at 2023-03-30 20:19:48 +0300
+Processing by ProjectsController#create as */*
+  Parameters: {"name"=>"project 3", "description"=>"project description", "due_date"=>"1-1-2022", "completed"=>"TRUE"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mProject Create (2.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project 3"], ["description", "project description"], ["due_date", "2022-01-01"], ["user_id", 1], ["completed", 1], ["created_at", "2023-03-30 17:19:48.985934"], ["updated_at", "2023-03-30 17:19:48.985934"]]
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Project (0.62ms)
+Completed 201 Created in 436ms (Views: 295.7ms | ActiveRecord: 13.0ms | Allocations: 3647)
+
+
+Started POST "/user/projects" for 127.0.0.1 at 2023-03-30 20:19:53 +0300
+Processing by ProjectsController#create as */*
+  Parameters: {"name"=>"project 4", "description"=>"project description", "due_date"=>"1-1-2022", "completed"=>"TRUE"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mProject Create (1.9ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project 4"], ["description", "project description"], ["due_date", "2022-01-01"], ["user_id", 1], ["completed", 1], ["created_at", "2023-03-30 17:19:53.171254"], ["updated_at", "2023-03-30 17:19:53.171254"]]
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Project (2.35ms)
+Completed 201 Created in 49ms (Views: 12.4ms | ActiveRecord: 7.4ms | Allocations: 3626)
+
+
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from require at /usr/share/rvm/rubies/ruby-2.7.4/lib/ruby/site_ruby/2.7.0/rubygems/core_ext/kernel_require.rb:37)
+Started POST "/projects" for 127.0.0.1 at 2023-03-30 20:21:39 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/projects"):
+  
+Started GET "/projects" for 127.0.0.1 at 2023-03-30 20:21:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/projects"):
+  
+Started GET "/user/projects" for 127.0.0.1 at 2023-03-30 20:21:56 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"email"=>"example8@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `index'
+No serializer found for resource: #<Project id: 1, name: "project one", description: "project description", due_date: "2022-01-01", user_id: 1, completed: true, created_at: "2023-03-30 17:19:41.669207000 +0000", updated_at: "2023-03-30 17:19:41.669207000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Project::ActiveRecord_Associations_CollectionProxy (4.44ms)
+Completed 200 OK in 369ms (Views: 128.6ms | ActiveRecord: 7.0ms | Allocations: 67421)
+
+
+Started GET "/user/projects/tasks" for 127.0.0.1 at 2023-03-30 20:38:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/projects/tasks"):
+  
+Started GET "/user/projects/1/tasks" for 127.0.0.1 at 2023-03-30 20:38:23 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/projects/1/tasks"):
+  
+Started GET "/projects/1/tasks" for 127.0.0.1 at 2023-03-30 20:38:34 +0300
+Processing by TasksController#index as */*
+  Parameters: {"email"=>"example8@gmail.com", "password"=>"[FILTERED]", "project_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 200 OK in 56ms (Views: 18.2ms | ActiveRecord: 4.7ms | Allocations: 6305)
+
+
