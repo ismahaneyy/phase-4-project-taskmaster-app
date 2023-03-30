@@ -12,7 +12,7 @@
     - The name of the user **must** be provided for the request to succeed.
 
 - **email**
-    - It **must** provided for the request to succeed.
+    - It **must** be provided for the request to succeed.
     - It should be unique among all records in the database.
     - It should have the following format:
         - It must have at least one character before the "@" symbol.
@@ -72,7 +72,7 @@ Returns an array of all the projects of a logged in user in the format below:
 
     post '/user/projects'
 
-Creates a new project for a loggen in user. it takes in the following parameters:
+Creates a new project for a logged in user. it takes in the following parameters:
 
   - **name**
     - Must be provided.
@@ -81,6 +81,7 @@ Creates a new project for a loggen in user. it takes in the following parameters
     - Must be provided.
   - **due_date**
   - **completed**
+    - Boolean
 
 <br/>
 <br/>
@@ -104,7 +105,7 @@ Deletes a user's specific project accepting the specified parameters above.
 
     get "/projects/:project_id/tasks"
 
-Retrieves a list of a logged in user's tasks:
+Returns an array of a logged in user's tasks:
 
 
 ```json
@@ -128,7 +129,7 @@ Retrieves a list of a logged in user's tasks:
 
     post "/projects/:project_id/tasks"
 
-Creates a new task in a project for a loggen in user. it takes in the following parameters:
+Creates a new task in a project for a logged in user.It takes in the following parameters:
 
   - **name**
     - Must be provided.
@@ -137,6 +138,7 @@ Creates a new task in a project for a loggen in user. it takes in the following 
     - Must be provided.
   - **due_date**
   - **completed**
+    - Boolean
 
 <br/>
 <br/>
