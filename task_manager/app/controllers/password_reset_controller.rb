@@ -2,7 +2,7 @@ class PasswordResetController < ApplicationController
     def new
       user = User.find_by_email(params[:email])
       if user
-        PasswordResetMailer.password_reset(user).deliver_now
+        PasswordResetMailer.password_reset(user).deliver_later
         render json: { message:'Password reset instructions have been sent to your email.' } 
       else
         render json: { message:'Email address has not been found' } 
