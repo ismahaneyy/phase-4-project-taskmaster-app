@@ -1,5 +1,6 @@
+
 # Create Users
-user1 = User.create!(name: 'Jefff', email: 'jefff@user.com', password: '1234567')
+user1 = User.create!(name: 'Jefff', email: 'jeffff@user.com', password: '1234567')
 user2 = User.create!(name: 'Ismahann', email: 'ismahann@user.com', password: '1234567')
 
 # Create Projects for user1

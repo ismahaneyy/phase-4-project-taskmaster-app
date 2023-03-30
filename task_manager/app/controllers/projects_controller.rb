@@ -3,8 +3,8 @@ class ProjectsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    if params[:user_id]
-      render json: User.find(params[:user_id]).projects
+    if current_user
+      render json: current_user.projects
     else
       render json: current_user.projects
     end
@@ -12,7 +12,6 @@ class ProjectsController < ApplicationController
 
   def create
     project = current_user.projects.new(project_params)
-
     if project.save
       render json: project, status: :created 
     else
@@ -36,10 +35,10 @@ class ProjectsController < ApplicationController
   private
 
   def set_project
-    @project = User.find(params[:user_id]).projects.find(params[:id])
+    @project = current_user.projects.find(params[:id])
   end
 
   def project_params
-    params.require(:project).permit(:name, :description, :due_date, :completed)
+    params.permit(:name, :description, :due_date, :completed)
   end
 end

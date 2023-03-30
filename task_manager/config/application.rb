@@ -10,11 +10,9 @@ Bundler.require(*Rails.groups)
 module TaskManager
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore
-
-    config.load_defaults 7.0
-
-    config.session_store :cookie_store, key: '_your_app_session'
+    config.action_dispatch.cookies_same_site_protection = :strict
 
     
     # Configuration for the application, engines, and railties goes here.
