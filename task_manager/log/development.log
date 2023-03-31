@@ -16072,3 +16072,39 @@ Processing by TasksController#index as */*
 Completed 200 OK in 56ms (Views: 18.2ms | ActiveRecord: 4.7ms | Allocations: 6305)
 
 
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from block (2 levels) in <class:Railtie> at /usr/share/rvm/gems/ruby-2.7.4/gems/activerecord-7.0.4.3/lib/active_record/railtie.rb:264)
+Started GET "/users/projects" for 127.0.0.1 at 2023-03-31 07:30:14 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"projects"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:36:in `set_user'
+Completed 404 Not Found in 21ms (ActiveRecord: 1.6ms | Allocations: 6772)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=projects):
+  
+app/controllers/users_controller.rb:36:in `set_user'
+Started GET "/users/2/projects" for 127.0.0.1 at 2023-03-31 07:30:21 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/2/projects"):
+  
+Started GET "/user/projects" for 127.0.0.1 at 2023-03-31 07:30:54 +0300
+Processing by ProjectsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 21ms (Views: 11.7ms | ActiveRecord: 0.3ms | Allocations: 1847)
+
+
