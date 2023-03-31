@@ -15902,546 +15902,173 @@ Content-Transfer-Encoding: 7bit
 Completed 200 OK in 3400ms (Views: 32.9ms | ActiveRecord: 10.3ms | Allocations: 94266)
 
 
-DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
-`legacy_connection_handling` to `false` in your application.
+Started POST "/login" for 127.0.0.1 at 2023-03-30 20:18:35 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"example8@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example8@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (24.93ms)
+Completed 200 OK in 826ms (Views: 38.4ms | ActiveRecord: 14.2ms | Allocations: 2905)
 
-The new connection handling does not support `connection_handlers`
-getter and setter.
 
-Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
- (called from <main> at bin/rails:4)
-  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
-  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
-`legacy_connection_handling` to `false` in your application.
+Started POST "/projects" for 127.0.0.1 at 2023-03-30 20:18:53 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/projects"):
+  
+Started GET "/user/projects" for 127.0.0.1 at 2023-03-30 20:19:14 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"email"=>"example8@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.9ms)
+Completed 200 OK in 403ms (Views: 173.7ms | ActiveRecord: 4.7ms | Allocations: 10842)
 
-The new connection handling does not support `connection_handlers`
-getter and setter.
 
-Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
- (called from <main> at bin/rails:4)
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Migrating to CreateUsers (20230328080631)
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "password_digest" varchar NOT NULL, "password_reset_token" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328080631"]]
-  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
-Migrating to CreateTasks (20230328080947)
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "completed" boolean NOT NULL, "project_id" integer NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_02e851e3b7"
-FOREIGN KEY ("project_id")
-  REFERENCES "projects" ("id")
-, CONSTRAINT "fk_rails_4d2a9e4d7e"
-FOREIGN KEY ("user_id")
-  REFERENCES "users" ("id")
-)[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_project_id" ON "tasks" ("project_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_user_id" ON "tasks" ("user_id")[0m
-  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328080947"]]
-  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
-Migrating to CreateProjects (20230328081438)
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "user_id" integer NOT NULL, "completed" boolean NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_b872a6760a"
-FOREIGN KEY ("user_id")
-  REFERENCES "users" ("id")
-)[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_projects_on_user_id" ON "projects" ("user_id")[0m
-  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328081438"]]
-  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
-Migrating to CreatePasswordResets (20230328081836)
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "password_resets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "token" varchar, "expires_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_526379cd99"
-FOREIGN KEY ("user_id")
-  REFERENCES "users" ("id")
-)[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_password_resets_on_user_id" ON "password_resets" ("user_id")[0m
-  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328081836"]]
-  [1m[36mTRANSACTION (12.0ms)[0m  [1m[36mcommit transaction[0m
-Migrating to AddAuthenticationTokenToUsers (20230329143651)
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "authentication_token" varchar[0m
-  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230329143651"]]
-  [1m[36mTRANSACTION (6.4ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-30 13:55:51.498436"], ["updated_at", "2023-03-30 13:55:51.498436"]]
-  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jefff@user.com"], ["LIMIT", 1]]
-  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jefff"], ["email", "jefff@user.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-30 13:55:51.845047"], ["updated_at", "2023-03-30 13:55:51.845047"]]
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
-DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
-`legacy_connection_handling` to `false` in your application.
-
-The new connection handling does not support `connection_handlers`
-getter and setter.
-
-Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
- (called from <main> at bin/rails:4)
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jefff@user.com"], ["LIMIT", 1]]
-  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jefff"], ["email", "jefff@user.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-30 14:05:11.380909"], ["updated_at", "2023-03-30 14:05:11.380909"]]
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
-DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
-`legacy_connection_handling` to `false` in your application.
-
-The new connection handling does not support `connection_handlers`
-getter and setter.
-
-Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
- (called from <main> at bin/rails:4)
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ian@new.com"], ["LIMIT", 1]]
-  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "password_reset_token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ian"], ["email", "ian@new.com"], ["password_digest", "[FILTERED]"], ["password_reset_token", "[FILTERED]"], ["created_at", "2023-03-30 14:07:53.822353"], ["updated_at", "2023-03-30 14:07:53.822353"]]
-  [1m[36mTRANSACTION (18.6ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jefff@user.com"], ["LIMIT", 1]]
-  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jefff"], ["email", "jefff@user.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-30 14:07:54.114534"], ["updated_at", "2023-03-30 14:07:54.114534"]]
-  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
-DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
-`legacy_connection_handling` to `false` in your application.
-
-The new connection handling does not support `connection_handlers`
-getter and setter.
-
-Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
- (called from <main> at bin/rails:4)
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "password_resets"[0m
-  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "password_resets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "token" varchar, "expires_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[35m (5.2ms)[0m  [1m[35mCREATE INDEX "index_password_resets_on_user_id" ON "password_resets" ("user_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "projects"[0m
-  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "user_id" integer NOT NULL, "completed" boolean NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[35m (6.8ms)[0m  [1m[35mCREATE INDEX "index_projects_on_user_id" ON "projects" ("user_id")[0m
-  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks"[0m
-  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "completed" boolean NOT NULL, "project_id" integer NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[35m (5.3ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_project_id" ON "tasks" ("project_id")[0m
-  [1m[35m (5.4ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_user_id" ON "tasks" ("user_id")[0m
-  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
-  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "password_digest" varchar NOT NULL, "password_reset_token" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "authentication_token" varchar)[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "apassword_resets" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "token" varchar DEFAULT NULL, "expires_at" datetime(6) DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_apassword_resets_on_user_id" ON "apassword_resets" ("user_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "apassword_resets" ("id","user_id","token","expires_at","created_at","updated_at")
-                     SELECT "id","user_id","token","expires_at","created_at","updated_at" FROM "password_resets"[0m
-  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "password_resets"[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "password_resets" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "token" varchar DEFAULT NULL, "expires_at" datetime(6) DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_526379cd99"
-FOREIGN KEY ("user_id")
-  REFERENCES "users" ("id")
-)[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_password_resets_on_user_id" ON "password_resets" ("user_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "password_resets" ("id","user_id","token","expires_at","created_at","updated_at")
-                     SELECT "id","user_id","token","expires_at","created_at","updated_at" FROM "apassword_resets"[0m
-  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "apassword_resets"[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
-  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aprojects" ("id" integer NOT NULL PRIMARY KEY, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "user_id" integer NOT NULL, "completed" boolean NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_aprojects_on_user_id" ON "aprojects" ("user_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aprojects" ("id","name","description","due_date","user_id","completed","created_at","updated_at")
-                     SELECT "id","name","description","due_date","user_id","completed","created_at","updated_at" FROM "projects"[0m
-  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "projects"[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "projects" ("id" integer NOT NULL PRIMARY KEY, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "user_id" integer NOT NULL, "completed" boolean NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_b872a6760a"
-FOREIGN KEY ("user_id")
-  REFERENCES "users" ("id")
-)[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_projects_on_user_id" ON "projects" ("user_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "projects" ("id","name","description","due_date","user_id","completed","created_at","updated_at")
-                     SELECT "id","name","description","due_date","user_id","completed","created_at","updated_at" FROM "aprojects"[0m
-  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "aprojects"[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
-  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
-  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "completed" boolean NOT NULL, "project_id" integer NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_atasks_on_user_id" ON "atasks" ("user_id")[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_atasks_on_project_id" ON "atasks" ("project_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atasks" ("id","name","description","due_date","completed","project_id","user_id","created_at","updated_at")
-                     SELECT "id","name","description","due_date","completed","project_id","user_id","created_at","updated_at" FROM "tasks"[0m
-  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "tasks"[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "completed" boolean NOT NULL, "project_id" integer NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_02e851e3b7"
-FOREIGN KEY ("project_id")
-  REFERENCES "projects" ("id")
-)[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_project_id" ON "tasks" ("project_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_user_id" ON "tasks" ("user_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","name","description","due_date","completed","project_id","user_id","created_at","updated_at")
-                     SELECT "id","name","description","due_date","completed","project_id","user_id","created_at","updated_at" FROM "atasks"[0m
-  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "atasks"[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
-  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "completed" boolean NOT NULL, "project_id" integer NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_atasks_on_user_id" ON "atasks" ("user_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_atasks_on_project_id" ON "atasks" ("project_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atasks" ("id","name","description","due_date","completed","project_id","user_id","created_at","updated_at")
-                     SELECT "id","name","description","due_date","completed","project_id","user_id","created_at","updated_at" FROM "tasks"[0m
-  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "tasks"[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "completed" boolean NOT NULL, "project_id" integer NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_02e851e3b7"
-FOREIGN KEY ("project_id")
-  REFERENCES "projects" ("id")
-, CONSTRAINT "fk_rails_4d2a9e4d7e"
-FOREIGN KEY ("user_id")
-  REFERENCES "users" ("id")
-)[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_project_id" ON "tasks" ("project_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_user_id" ON "tasks" ("user_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","name","description","due_date","completed","project_id","user_id","created_at","updated_at")
-                     SELECT "id","name","description","due_date","completed","project_id","user_id","created_at","updated_at" FROM "atasks"[0m
-  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "atasks"[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
-  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (4.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230329143651)[0m
-  [1m[35m (4.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
-(20230328080631),
-(20230328080947),
-(20230328081438),
-(20230328081836);
-
-[0m
-  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-30 14:09:18.713586"], ["updated_at", "2023-03-30 14:09:18.713586"]]
-  [1m[36mTRANSACTION (7.6ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "30570ec8e08ad4b007ea2cb599667cc52d458100"], ["created_at", "2023-03-30 14:09:18.731262"], ["updated_at", "2023-03-30 14:09:18.731262"]]
-  [1m[36mTRANSACTION (9.2ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "password_resets"[0m
-  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "password_resets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "token" varchar, "expires_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[35m (10.3ms)[0m  [1m[35mCREATE INDEX "index_password_resets_on_user_id" ON "password_resets" ("user_id")[0m
-  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "projects"[0m
-  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "user_id" integer NOT NULL, "completed" boolean NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[35m (5.0ms)[0m  [1m[35mCREATE INDEX "index_projects_on_user_id" ON "projects" ("user_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks"[0m
-  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "completed" boolean NOT NULL, "project_id" integer NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[35m (5.2ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_project_id" ON "tasks" ("project_id")[0m
-  [1m[35m (5.2ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_user_id" ON "tasks" ("user_id")[0m
-  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
-  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "password_digest" varchar NOT NULL, "password_reset_token" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "authentication_token" varchar)[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "apassword_resets" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "token" varchar DEFAULT NULL, "expires_at" datetime(6) DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_apassword_resets_on_user_id" ON "apassword_resets" ("user_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "apassword_resets" ("id","user_id","token","expires_at","created_at","updated_at")
-                     SELECT "id","user_id","token","expires_at","created_at","updated_at" FROM "password_resets"[0m
-  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "password_resets"[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "password_resets" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "token" varchar DEFAULT NULL, "expires_at" datetime(6) DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_526379cd99"
-FOREIGN KEY ("user_id")
-  REFERENCES "users" ("id")
-)[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_password_resets_on_user_id" ON "password_resets" ("user_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "password_resets" ("id","user_id","token","expires_at","created_at","updated_at")
-                     SELECT "id","user_id","token","expires_at","created_at","updated_at" FROM "apassword_resets"[0m
-  [1m[35m (4.3ms)[0m  [1m[35mDROP TABLE "apassword_resets"[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
-  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aprojects" ("id" integer NOT NULL PRIMARY KEY, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "user_id" integer NOT NULL, "completed" boolean NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_aprojects_on_user_id" ON "aprojects" ("user_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aprojects" ("id","name","description","due_date","user_id","completed","created_at","updated_at")
-                     SELECT "id","name","description","due_date","user_id","completed","created_at","updated_at" FROM "projects"[0m
-  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "projects"[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "projects" ("id" integer NOT NULL PRIMARY KEY, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "user_id" integer NOT NULL, "completed" boolean NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_b872a6760a"
-FOREIGN KEY ("user_id")
-  REFERENCES "users" ("id")
-)[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_projects_on_user_id" ON "projects" ("user_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "projects" ("id","name","description","due_date","user_id","completed","created_at","updated_at")
-                     SELECT "id","name","description","due_date","user_id","completed","created_at","updated_at" FROM "aprojects"[0m
-  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "aprojects"[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
-  [1m[36mTRANSACTION (4.1ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "completed" boolean NOT NULL, "project_id" integer NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_atasks_on_user_id" ON "atasks" ("user_id")[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_atasks_on_project_id" ON "atasks" ("project_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atasks" ("id","name","description","due_date","completed","project_id","user_id","created_at","updated_at")
-                     SELECT "id","name","description","due_date","completed","project_id","user_id","created_at","updated_at" FROM "tasks"[0m
-  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "tasks"[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "completed" boolean NOT NULL, "project_id" integer NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_02e851e3b7"
-FOREIGN KEY ("project_id")
-  REFERENCES "projects" ("id")
-)[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_project_id" ON "tasks" ("project_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_user_id" ON "tasks" ("user_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","name","description","due_date","completed","project_id","user_id","created_at","updated_at")
-                     SELECT "id","name","description","due_date","completed","project_id","user_id","created_at","updated_at" FROM "atasks"[0m
-  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "atasks"[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
-  [1m[36mTRANSACTION (7.4ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
-  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "completed" boolean NOT NULL, "project_id" integer NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_atasks_on_user_id" ON "atasks" ("user_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_atasks_on_project_id" ON "atasks" ("project_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atasks" ("id","name","description","due_date","completed","project_id","user_id","created_at","updated_at")
-                     SELECT "id","name","description","due_date","completed","project_id","user_id","created_at","updated_at" FROM "tasks"[0m
-  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "tasks"[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "completed" boolean NOT NULL, "project_id" integer NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_02e851e3b7"
-FOREIGN KEY ("project_id")
-  REFERENCES "projects" ("id")
-, CONSTRAINT "fk_rails_4d2a9e4d7e"
-FOREIGN KEY ("user_id")
-  REFERENCES "users" ("id")
-)[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_project_id" ON "tasks" ("project_id")[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_user_id" ON "tasks" ("user_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","name","description","due_date","completed","project_id","user_id","created_at","updated_at")
-                     SELECT "id","name","description","due_date","completed","project_id","user_id","created_at","updated_at" FROM "atasks"[0m
-  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "atasks"[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
-  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
-  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (4.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230329143651)[0m
-  [1m[35m (3.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
-(20230328080631),
-(20230328080947),
-(20230328081438),
-(20230328081836);
-
-[0m
-  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-30 14:09:18.995174"], ["updated_at", "2023-03-30 14:09:18.995174"]]
-  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2023-03-30 14:09:19.005294"], ["key", "environment"]]
-  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "30570ec8e08ad4b007ea2cb599667cc52d458100"], ["created_at", "2023-03-30 14:09:19.015936"], ["updated_at", "2023-03-30 14:09:19.015936"]]
-  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ian@new.com"], ["LIMIT", 1]]
-  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "password_reset_token", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ian"], ["email", "ian@new.com"], ["password_digest", "[FILTERED]"], ["password_reset_token", "[FILTERED]"], ["created_at", "2023-03-30 14:09:19.344009"], ["updated_at", "2023-03-30 14:09:19.344009"], ["authentication_token", "[FILTERED]"]]
-  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jefff@user.com"], ["LIMIT", 1]]
-  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jefff"], ["email", "jefff@user.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-30 14:09:19.620305"], ["updated_at", "2023-03-30 14:09:19.620305"]]
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
-DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
-`legacy_connection_handling` to `false` in your application.
-
-The new connection handling does not support `connection_handlers`
-getter and setter.
-
-Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
- (called from <main> at bin/rails:4)
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ian@new.com"], ["LIMIT", 1]]
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
-DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
-`legacy_connection_handling` to `false` in your application.
-
-The new connection handling does not support `connection_handlers`
-getter and setter.
-
-Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
- (called from <main> at bin/rails:4)
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "iann@new.com"], ["LIMIT", 1]]
-  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "password_reset_token", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ian"], ["email", "iann@new.com"], ["password_digest", "[FILTERED]"], ["password_reset_token", "[FILTERED]"], ["created_at", "2023-03-30 14:09:56.608341"], ["updated_at", "2023-03-30 14:09:56.608341"], ["authentication_token", "[FILTERED]"]]
-  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeffff@user.com"], ["LIMIT", 1]]
-  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jefff"], ["email", "jeffff@user.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-30 14:09:56.900373"], ["updated_at", "2023-03-30 14:09:56.900373"]]
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
-DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
-`legacy_connection_handling` to `false` in your application.
-
-The new connection handling does not support `connection_handlers`
-getter and setter.
-
-Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
- (called from <main> at bin/rails:4)
-  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
-  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Migrating to CreateUsers (20230328080631)
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "password_digest" varchar NOT NULL, "password_reset_token" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328080631"]]
-  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
-Migrating to CreateTasks (20230328080947)
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "completed" boolean NOT NULL, "project_id" integer NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_02e851e3b7"
-FOREIGN KEY ("project_id")
-  REFERENCES "projects" ("id")
-, CONSTRAINT "fk_rails_4d2a9e4d7e"
-FOREIGN KEY ("user_id")
-  REFERENCES "users" ("id")
-)[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_project_id" ON "tasks" ("project_id")[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_user_id" ON "tasks" ("user_id")[0m
-  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328080947"]]
-  [1m[36mTRANSACTION (4.6ms)[0m  [1m[36mcommit transaction[0m
-Migrating to CreateProjects (20230328081438)
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "description" text NOT NULL, "due_date" date NOT NULL, "user_id" integer NOT NULL, "completed" boolean NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_b872a6760a"
-FOREIGN KEY ("user_id")
-  REFERENCES "users" ("id")
-)[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_projects_on_user_id" ON "projects" ("user_id")[0m
-  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328081438"]]
-  [1m[36mTRANSACTION (4.6ms)[0m  [1m[36mcommit transaction[0m
-Migrating to CreatePasswordResets (20230328081836)
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "password_resets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "token" varchar, "expires_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_526379cd99"
-FOREIGN KEY ("user_id")
-  REFERENCES "users" ("id")
-)[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_password_resets_on_user_id" ON "password_resets" ("user_id")[0m
-  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328081836"]]
-  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
-Migrating to AddAuthenticationTokenToUsers (20230329143651)
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "authentication_token" varchar[0m
-  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230329143651"]]
-  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-30 14:13:30.563986"], ["updated_at", "2023-03-30 14:13:30.563986"]]
-  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
-`legacy_connection_handling` to `false` in your application.
-
-The new connection handling does not support `connection_handlers`
-getter and setter.
-
-Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
- (called from <main> at bin/rails:4)
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeffff@user.com"], ["LIMIT", 1]]
-  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jefff"], ["email", "jeffff@user.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-30 14:13:49.551007"], ["updated_at", "2023-03-30 14:13:49.551007"]]
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
-DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
-`legacy_connection_handling` to `false` in your application.
-
-The new connection handling does not support `connection_handlers`
-getter and setter.
-
-Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
- (called from <main> at bin/rails:4)
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeffff@user.com"], ["LIMIT", 1]]
-  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "password_reset_token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jefff"], ["email", "jeffff@user.com"], ["password_digest", "[FILTERED]"], ["password_reset_token", "[FILTERED]"], ["created_at", "2023-03-30 14:22:51.816121"], ["updated_at", "2023-03-30 14:22:51.816121"]]
-  [1m[36mTRANSACTION (11.3ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ismahann@user.com"], ["LIMIT", 1]]
-  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "password_reset_token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ismahann"], ["email", "ismahann@user.com"], ["password_digest", "[FILTERED]"], ["password_reset_token", "[FILTERED]"], ["created_at", "2023-03-30 14:22:52.125608"], ["updated_at", "2023-03-30 14:22:52.125608"]]
-  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "My Portfolio"], ["description", "My portfolio app"], ["due_date", "2023-04-06"], ["user_id", 1], ["completed", 0], ["created_at", "2023-03-30 14:22:52.154194"], ["updated_at", "2023-03-30 14:22:52.154194"]]
-  [1m[36mTRANSACTION (7.6ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Project Manager"], ["description", "My Project Manager app"], ["due_date", "2023-04-13"], ["user_id", 1], ["completed", 1], ["created_at", "2023-03-30 14:22:52.166421"], ["updated_at", "2023-03-30 14:22:52.166421"]]
+Started POST "/user/projects" for 127.0.0.1 at 2023-03-30 20:19:41 +0300
+Processing by ProjectsController#create as */*
+  Parameters: {"name"=>"project one", "description"=>"project description", "due_date"=>"1-1-2022", "completed"=>"TRUE"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mProject Create (3.0ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project one"], ["description", "project description"], ["due_date", "2022-01-01"], ["user_id", 1], ["completed", 1], ["created_at", "2023-03-30 17:19:41.669207"], ["updated_at", "2023-03-30 17:19:41.669207"]]
+  ↳ app/controllers/projects_controller.rb:15:in `create'
   [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Todo App"], ["description", "My Todo app"], ["due_date", "2023-04-20"], ["user_id", 2], ["completed", 0], ["created_at", "2023-03-30 14:22:52.174965"], ["updated_at", "2023-03-30 14:22:52.174965"]]
-  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Movie App"], ["description", "My Movie app"], ["due_date", "2023-04-27"], ["user_id", 2], ["completed", 0], ["created_at", "2023-03-30 14:22:52.182815"], ["updated_at", "2023-03-30 14:22:52.182815"]]
-  [1m[36mTRANSACTION (4.1ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Task 1 for My Portfolio"], ["description", "This is the first task for My Portfolio"], ["due_date", "2023-04-06"], ["completed", 0], ["project_id", 1], ["user_id", 1], ["created_at", "2023-03-30 14:22:52.204011"], ["updated_at", "2023-03-30 14:22:52.204011"]]
-  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Task 2 for My Portfolio"], ["description", "This is the second task for My Portfolio"], ["due_date", "2023-04-13"], ["completed", 1], ["project_id", 1], ["user_id", 1], ["created_at", "2023-03-30 14:22:52.213171"], ["updated_at", "2023-03-30 14:22:52.213171"]]
-  [1m[36mTRANSACTION (4.1ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Task 3 for My Portfolio"], ["description", "This is the third task for My Portfolio"], ["due_date", "2023-04-20"], ["completed", 0], ["project_id", 1], ["user_id", 1], ["created_at", "2023-03-30 14:22:52.221294"], ["updated_at", "2023-03-30 14:22:52.221294"]]
-  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Task 1 for Project Manager"], ["description", "This is the first task for Project Manager"], ["due_date", "2023-04-27"], ["completed", 0], ["project_id", 2], ["user_id", 1], ["created_at", "2023-03-30 14:22:52.229421"], ["updated_at", "2023-03-30 14:22:52.229421"]]
-  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Task 2 for Project Manager"], ["description", "This is the second task for Project Manager"], ["due_date", "2023-05-04"], ["completed", 0], ["project_id", 2], ["user_id", 1], ["created_at", "2023-03-30 14:22:52.238594"], ["updated_at", "2023-03-30 14:22:52.238594"]]
-  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Task 3 for Project Manager"], ["description", "This is the third task for Project Manager"], ["due_date", "2023-05-11"], ["completed", 1], ["project_id", 2], ["user_id", 1], ["created_at", "2023-03-30 14:22:52.251403"], ["updated_at", "2023-03-30 14:22:52.251403"]]
-  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Task 1 for Todo App"], ["description", "This is the first task for Todo App"], ["due_date", "2023-05-18"], ["completed", 0], ["project_id", 3], ["user_id", 2], ["created_at", "2023-03-30 14:22:52.260034"], ["updated_at", "2023-03-30 14:22:52.260034"]]
-  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Task 2 for Todo App"], ["description", "This is the second task for Todo App"], ["due_date", "2023-05-25"], ["completed", 1], ["project_id", 3], ["user_id", 2], ["created_at", "2023-03-30 14:22:52.268035"], ["updated_at", "2023-03-30 14:22:52.268035"]]
-  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Task 3 for Todo App"], ["description", "This is the third task for Todo App"], ["due_date", "2023-06-01"], ["completed", 0], ["project_id", 3], ["user_id", 2], ["created_at", "2023-03-30 14:22:52.277438"], ["updated_at", "2023-03-30 14:22:52.277438"]]
-  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Task 1 for Movie App"], ["description", "This is the first task for Movie App"], ["due_date", "2023-06-08"], ["completed", 0], ["project_id", 4], ["user_id", 2], ["created_at", "2023-03-30 14:22:52.286559"], ["updated_at", "2023-03-30 14:22:52.286559"]]
-  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Task 2 for Movie App"], ["description", "This is the second task for Movie App"], ["due_date", "2023-06-15"], ["completed", 0], ["project_id", 4], ["user_id", 2], ["created_at", "2023-03-30 14:22:52.295181"], ["updated_at", "2023-03-30 14:22:52.295181"]]
-  [1m[36mTRANSACTION (9.0ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "completed", "project_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Task 3 for Movie App"], ["description", "This is the third task for Movie App"], ["due_date", "2023-06-22"], ["completed", 1], ["project_id", 4], ["user_id", 2], ["created_at", "2023-03-30 14:22:52.325587"], ["updated_at", "2023-03-30 14:22:52.325587"]]
-  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Project (2.03ms)
+Completed 201 Created in 280ms (Views: 19.5ms | ActiveRecord: 10.4ms | Allocations: 19313)
+
+
+Started POST "/user/projects" for 127.0.0.1 at 2023-03-30 20:19:42 +0300
+Processing by ProjectsController#create as */*
+  Parameters: {"name"=>"project one", "description"=>"project description", "due_date"=>"1-1-2022", "completed"=>"TRUE"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mProject Create (1.6ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project one"], ["description", "project description"], ["due_date", "2022-01-01"], ["user_id", 1], ["completed", 1], ["created_at", "2023-03-30 17:19:43.048584"], ["updated_at", "2023-03-30 17:19:43.048584"]]
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Project (2.74ms)
+Completed 201 Created in 96ms (Views: 24.1ms | ActiveRecord: 10.5ms | Allocations: 3625)
+
+
+Started POST "/user/projects" for 127.0.0.1 at 2023-03-30 20:19:48 +0300
+Processing by ProjectsController#create as */*
+  Parameters: {"name"=>"project 3", "description"=>"project description", "due_date"=>"1-1-2022", "completed"=>"TRUE"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mProject Create (2.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project 3"], ["description", "project description"], ["due_date", "2022-01-01"], ["user_id", 1], ["completed", 1], ["created_at", "2023-03-30 17:19:48.985934"], ["updated_at", "2023-03-30 17:19:48.985934"]]
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Project (0.62ms)
+Completed 201 Created in 436ms (Views: 295.7ms | ActiveRecord: 13.0ms | Allocations: 3647)
+
+
+Started POST "/user/projects" for 127.0.0.1 at 2023-03-30 20:19:53 +0300
+Processing by ProjectsController#create as */*
+  Parameters: {"name"=>"project 4", "description"=>"project description", "due_date"=>"1-1-2022", "completed"=>"TRUE"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mProject Create (1.9ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "due_date", "user_id", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "project 4"], ["description", "project description"], ["due_date", "2022-01-01"], ["user_id", 1], ["completed", 1], ["created_at", "2023-03-30 17:19:53.171254"], ["updated_at", "2023-03-30 17:19:53.171254"]]
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Project (2.35ms)
+Completed 201 Created in 49ms (Views: 12.4ms | ActiveRecord: 7.4ms | Allocations: 3626)
+
+
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from require at /usr/share/rvm/rubies/ruby-2.7.4/lib/ruby/site_ruby/2.7.0/rubygems/core_ext/kernel_require.rb:37)
+Started POST "/projects" for 127.0.0.1 at 2023-03-30 20:21:39 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/projects"):
+  
+Started GET "/projects" for 127.0.0.1 at 2023-03-30 20:21:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/projects"):
+  
+Started GET "/user/projects" for 127.0.0.1 at 2023-03-30 20:21:56 +0300
+Processing by ProjectsController#index as */*
+  Parameters: {"email"=>"example8@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `index'
+No serializer found for resource: #<Project id: 1, name: "project one", description: "project description", due_date: "2022-01-01", user_id: 1, completed: true, created_at: "2023-03-30 17:19:41.669207000 +0000", updated_at: "2023-03-30 17:19:41.669207000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Project::ActiveRecord_Associations_CollectionProxy (4.44ms)
+Completed 200 OK in 369ms (Views: 128.6ms | ActiveRecord: 7.0ms | Allocations: 67421)
+
+
+Started GET "/user/projects/tasks" for 127.0.0.1 at 2023-03-30 20:38:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/projects/tasks"):
+  
+Started GET "/user/projects/1/tasks" for 127.0.0.1 at 2023-03-30 20:38:23 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/projects/1/tasks"):
+  
+Started GET "/projects/1/tasks" for 127.0.0.1 at 2023-03-30 20:38:34 +0300
+Processing by TasksController#index as */*
+  Parameters: {"email"=>"example8@gmail.com", "password"=>"[FILTERED]", "project_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 200 OK in 56ms (Views: 18.2ms | ActiveRecord: 4.7ms | Allocations: 6305)
+
+
