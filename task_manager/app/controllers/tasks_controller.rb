@@ -1,40 +1,48 @@
 class TasksController < ApplicationController
-    before_action :find_project_and_task, only: [:show, :update, :destroy]
+
+    before_action :verify_auth
 
     def index
       tasks = current_user.tasks.all
       render json: tasks
     end
+
   
     def show
       render json: @task, status: :found
     end
+    
   
     def create 
-      task = current_user.tasks.new(task_params)
-      task.project_id = params[:project_id]
-      if task.save
-        render json: task, status: :created
+      current_task = current_user.tasks.new(task_params)
+      current_task.project_id = params[:project_id]
+      if current_task.save
+        render json: current_task, status: :created
       else
-        render json: { error: task.errors.full_messages }
+        render json: { error: current_task.errors.full_messages }, status: :unprocessable_entity
       end
     end
   
+
     def update
-      if @task.update(task_params)
+      current_task = current_user.tasks.find_by(id: params[:id], project_id: params[:project_id])
+      if current_task.update(task_params)
         render json: { message: "Task updated successfully" }, status: :ok
       else
-        render json: @task.errors.full_messages
+        render json: current_task.errors.full_messages
       end
     end
+
   
     def destroy
-      if @task.destroy
+     current_task = current_user.tasks.find_by(id: params[:id], project_id: params[:project_id])
+      if current_task.destroy
         render json: { message: "Task destroyed successfully" }
       else
         render json: { message: "Failed to destroy task" }
       end
     end
+
   
     private
   

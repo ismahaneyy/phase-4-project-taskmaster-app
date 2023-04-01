@@ -1,14 +1,26 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :update, :destroy]
-  before_action :authenticate_user!
+
+  before_action :verify_auth
+
 
   def index
     if current_user
-      render json: current_user.projects
+      render json: current_user.projects, include: :tasks
     else
-      render json: current_user.projects
+      render json: current_user , status: :unprocessable_entity
     end
   end
+
+
+  def show
+    if current_user
+      projects = current_user.projects.find(params[:id])
+      render json: projects , include: :tasks
+    else
+      render json: { message: 'Project not found' }
+    end
+  end
+
 
   def create
     project = current_user.projects.new(project_params)
@@ -19,24 +31,26 @@ class ProjectsController < ApplicationController
     end
   end
 
+
   def update
-    if @project.update(project_params)
-      render json: @project
+    current_project = current_user.projects.find(params[:id])
+    if current_project.update(project_params)
+      render json: current_project
     else
-      render json: { errors: @project.errors.full_messages }, status: :unprocessable_entity
+      render json: { errors: current_project.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
+
   def destroy
-    @project.destroy
+    current_project = current_user.projects.find(params[:id])
+    current_project.destroy
     head :no_content
   end
 
+
   private
 
-  def set_project
-    @project = current_user.projects.find(params[:id])
-  end
 
   def project_params
     params.permit(:name, :description, :due_date, :completed)

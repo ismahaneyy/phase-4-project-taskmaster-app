@@ -8,6 +8,7 @@ patch "/projects/:project_id/tasks/:id", to: "tasks#update"
 delete "/projects/:project_id/tasks/:id", to: "tasks#destroy"
 
 get '/user/projects', to: "projects#index"
+get '/user/projects/:id', to: "projects#show" 
 post '/user/projects', to: "projects#create" 
 put '/user/projects/:id', to: "projects#update" 
 delete '/user/projects/:id', to: "projects#destroy"
@@ -22,7 +23,7 @@ post '/signup', to: 'users#create'
 get '/checkout', to: 'sessions#check_out'
 
 
-get '/password_reset/new', to: 'password_reset#new'
+post '/password_reset/new', to: 'password_reset#new'
 put 'password_reset/create', to: 'password_reset#create'
   
 end

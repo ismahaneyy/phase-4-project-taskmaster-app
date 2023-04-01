@@ -1,0 +1,402 @@
+#board-name-title {
+    position: absolute;
+    width: 22em;
+    height: 100%;
+    margin-left: 25px;
+    color: var(--main-body-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #board-name-title span{
+    width: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  #project-name{
+    width: 10em;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  #board-name-title i{
+    font-size: 18px;
+    cursor: pointer;
+    transition: 200ms;
+  }
+
+  #project-delete-icon:hover{
+    color: red;
+  }
+
+
+  #due-date{
+    color: var(--main-body-text-color);
+    position: absolute;
+    bottom: -20px;
+    left: 30px;
+  }
+
+  #due-date span{
+   color: blueviolet;
+   margin-left: 10px;
+  }
+  
+  #board-name-title h2 {
+    margin: 0;
+  }
+  
+  #options-container {
+    top: 0;
+    width: 5em;
+    position: absolute;
+    height: 100%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+  /* hamburger Menu */
+
+  
+  .ham-example-six {
+    /* background-color: aliceblue; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .ham-container-six {
+    position: relative;
+    cursor: pointer;
+    width: 30px;
+    height: 50%;
+    left: 15px;
+  }
+  
+  .ham-example-six > div > input {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 0px;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .example-six-bar {
+    position: absolute;
+    width: 100%;
+    height: 0.2em;
+    background-color: #fff;
+    pointer-events: none;
+  }
+  
+  #example-six-checkbox:not(:checked) + .example-six-bar {
+    transition: top 200ms linear 200ms, transform 150ms linear,
+      background-color 150ms linear;
+  }
+  
+  #example-six-checkbox:not(:checked) + #example-six-bar1 {
+    top: 10px;
+    left: 0px;
+    opacity: 1;
+  }
+  
+  #example-six-checkbox:not(:checked) ~ #example-six-bar2 {
+    top: 20.5px;
+    position: relative;
+  }
+  
+  #example-six-checkbox:not(:checked) ~ #example-six-bar2 > div {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    transition: all 115ms linear;
+  }
+  
+  #example-six-checkbox:not(:checked) ~ #example-six-bar2 > div:nth-child(1) {
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    transform: rotateZ(0deg);
+  }
+  
+  #example-six-checkbox:not(:checked) ~ #example-six-bar2 > div:nth-child(2) {
+    height: 100%;
+    top: 0px;
+    position: absolute;
+    width: 100%;
+    transform: rotateZ(0deg);
+  }
+  
+  #example-six-checkbox:not(:checked) ~ #example-six-bar3 {
+    top: 30px;
+    transition: top 200ms linear 200ms, transform 150ms linear,
+      background-color 150ms linear;
+  }
+  
+  #example-six-checkbox:checked + .example-six-bar {
+    transition: top 200ms linear, background-color 0ms linear 381ms;
+  }
+  
+  #example-six-checkbox:checked + #example-six-bar1 {
+    top: 20px;
+    background-color: transparent;
+  }
+  
+  #example-six-checkbox:checked ~ #example-six-bar2 {
+    top: 20px;
+    background-color: transparent;
+    transition: top 200ms linear, background-color 0ms linear 381ms;
+  }
+  
+  #example-six-checkbox:checked ~ #example-six-bar2 > div {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    transition: all 200ms linear 300ms;
+  }
+  
+  #example-six-checkbox:checked ~ #example-six-bar2 > div:nth-child(1) {
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    transform: rotateZ(45deg);
+    background-color: #fff;
+  }
+  
+  #example-six-checkbox:checked ~ #example-six-bar2 > div:nth-child(2) {
+    height: 100%;
+    top: 0px;
+    position: absolute;
+    width: 100%;
+    transform: rotateZ(-45deg);
+    background-color: #fff;
+  }
+  
+  #example-six-checkbox:checked ~ #example-six-bar3 {
+    top: 20px;
+    background-color: transparent;
+    transition: top 200ms linear, background-color 0ms linear 381ms;
+  }
+  
+  #options-container i {
+    color: var(--main-body-text-color);
+    cursor: pointer;
+    margin-right: 1em;
+  }
+  
+  #add-task-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    height: 80px;
+    width: 80px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--buttons-bg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: azure;
+    transition: all 500ms ease;
+  }
+  
+  #add-task-btn:hover {
+    box-shadow: 0 0 10px rgba(163, 65, 205, 0.4), 0 0 50px rgba(163, 65, 255, 0.4),
+      0 0 20px #fff inset;
+  }
+  
+  #add-task-btn i {
+    font-size: 2rem;
+  }
+  
+  /* ACTUAL BODY */
+  
+  .row-body {
+    width: 100%;
+    background-color: var(--main-body-bg);
+    flex-grow: 2;
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .body-col {
+    height: 40em;
+    width: 99%;
+    min-width: 500px;
+    display: grid;
+    /* place-items: center; */
+    box-sizing: border-box;
+    padding: 20px;
+    gap: 20px;
+    grid-template-columns: auto auto auto auto;
+    overflow-x: scroll;
+    transition: 400ms ease;
+  }
+
+  .body-col::-webkit-scrollbar{
+background-color: transparent;
+  }
+
+  .body-col::-webkit-scrollbar-thumb{
+    background-color: #303043;
+  }
+
+  
+  #draggable{
+      position: relative;
+      border: 1px solid #323245;
+      width: 17em;
+      height: 13em;
+      background-color: #1c1c27;
+      border-radius: 5px;
+      display: flex;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: center;
+      box-sizing: border-box;
+      padding-left: 15px;
+      transition: 300ms ease;
+  }
+
+  #draggable h4{
+      margin: 0;
+      color: var(--main-body-text-color);
+      font-size: 25px;
+      font-weight: 200;
+      pointer-events: none;
+      width: 10em;
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+  }
+  #draggable p{
+      margin: 0;
+      color: #acacac;
+      font-size: 12px;
+      width: 19em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      pointer-events: none;
+  }
+
+
+  
+#task-menu{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 6em;
+  width: 5em;
+  border-radius: 5px;
+  background-color: #37374a;
+  transition: 100ms ease;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#task-menu span{
+ color: #fff;
+ height: 2em;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ box-sizing: border-box;
+ padding-left: 15px;
+}
+
+#task-menu span:hover{
+  background-color: #47475c;
+ }
+
+ .task-status{
+  width: 5em;
+  height: 2em;
+  background-color: transparent;
+  border: 2px solid var(--nav-bg);
+  position: absolute;
+  top: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+ }
+
+.task-done{
+  color: green;
+ }
+
+.task-incomplete{
+color: red;
+}
+
+.menu-inactive{
+visibility: hidden;
+}
+
+.menu-active{
+  visibility: visible;
+}
+
+
+#menu-icon{
+  position: absolute;
+  top: 10px;
+  right: 4px;
+  color: azure;
+  /* z-index: 1000; */
+}
+
+.done-btn{
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  background-color: #acacac;
+  bottom: -10px;
+  right: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  color: azure;
+  justify-content: center;
+  background-color: var(--buttons-bg);
+  visibility: hidden;
+}
+
+#logout-cont{
+  width: 10em;
+  height: 2em;
+  background-color: transparent;
+  border: 1px solid #999;
+  position: absolute;
+  right: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+#logout-cont:hover{
+ border: 1px solid red;
+}
