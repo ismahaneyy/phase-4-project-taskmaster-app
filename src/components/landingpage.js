@@ -1,4 +1,8 @@
 import React from "react";
+// import login from "./Login";
+// import SignUp from "./SignUp";
+import { Link, Routes, Route } from "react-router-dom";
+
 
 function Landingpage() {
   return (
@@ -14,10 +18,17 @@ function Landingpage() {
        
 
         <div className="nav-buttons">
-          <button className="signin-button">Sign In</button>
+        <Link to="/Login"><button className="signin-button">Sign In</button></Link>
+
        
-          <button className="signup-button">Sign Up</button>
+          <Link to="/Signup"><button className="signup-button">Sign Up</button></Link>
         </div>
+
+        {/* <Routes>
+                <Route path="/login" element= {<Login/>}></Route>
+                
+                <Route path="/moviesList" element= {<SignUp/>}></Route>
+            </Routes> */}
       </div>
       <div className="bottom-container">
         <div className="middle-container">
