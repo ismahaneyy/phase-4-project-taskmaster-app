@@ -2,25 +2,29 @@ class SessionsController < ApplicationController
 
     def create
       user = User.find_by(email: params[:email])
-      save_user(user.id)
-      if current_user && current_user.authenticate(params[:password])
-        render json: { message: "Login successful", user: current_user }, status: :ok
+      if user&.authenticate(params[:password])
+        save_user(user.id)
+        token = encode(user.id, user.email)
+        render json: { message: "Logged in successfully", user: user ,  token: token}, status: :ok
       else
-        render json: { errors: { invalid: ["credentials"] } }, status: :unprocessable_entity
+        render json: { error: "Invalid email or password" }, status: :unauthorized
       end
     end
 
+
     def check_out
-      if current_user 
-        render json: current_user
+      if current_user
+        render json: @current_user
       else
-        render json: { message: "No user is logged in"}
+        render json: { message: "No user is logged in", data: @current_user}
       end
     end
+
 
     def destroy 
        remove_user
     end
 
+    
 end
 

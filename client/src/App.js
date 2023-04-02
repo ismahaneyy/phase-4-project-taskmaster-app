@@ -1,23 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import Loginform from './components/loginform';
+import Signup from './components/signupform';
+import EmailEntryForm from './components/emailentry';
+import TokenEntryForm from './components/tokenentry';
+import NewPassWordEntry from './components/newpasswordentry';
+import Dashboard from "./components/dashboard";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route exact path = "/">
+           <Loginform/>
+        </Route>
+        <Route exact path = "/signup">
+           <Signup/>
+        </Route>
+        <Route exact path = "/passwordresetemail">
+           <EmailEntryForm/>
+        </Route>
+        <Route exact path = "/passwordresettoken">
+          <TokenEntryForm/>
+        </Route>
+        <Route exact path = "/passwordresetpassword">
+           <NewPassWordEntry/>
+        </Route>
+        <Route exact path="/dashboard">
+          <Dashboard/>
+        </Route>
+      </Switch>
+
     </div>
   );
 }

@@ -1,0 +1,269 @@
+.form-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.form-container form {
+  width: 30%;
+  height: auto;
+  padding: 0px 10px;
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+.form-title {
+  text-align: center;
+}
+
+.form-group {
+  position: relative;
+  align-self: center;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  margin-top: 40px;
+}
+
+.form-input {
+  width: 100%;
+  height: 50%;
+  color: #000;
+  padding-top: 20px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  border-bottom: 2px solid #999;
+  font-weight: 900;
+  color: #555;
+}
+
+.form-input::placeholder {
+  color: transparent;
+}
+
+.form-label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 110%;
+  pointer-events: none;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 7px;
+  left: 0px;
+  font-weight: 900;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: #666;
+}
+
+.form-group input:focus + .form-label .content-name,
+.form-group input:not(:placeholder-shown):valid + .form-label .content-name {
+  transform: translateY(-160%);
+  font-size: 14px;
+  color: #645fc7;
+}
+
+.form-group input:not(:placeholder-shown):invalid + .form-label .content-name {
+  transform: translateY(-160%);
+  font-size: 14px;
+  color: rgb(156, 0, 0);
+}
+
+.visibility-icon {
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  width: 23px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #fff;
+}
+.verification-icon {
+  position: absolute;
+  right: 0px;
+  top: 2px;
+  width: 23px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.visibility-icon i {
+  color: #555;
+  font-size: 22px;
+}
+
+.verification-icon i {
+  color: #555;
+  font-size: 22px;
+  position: absolute;
+  opacity: 0;
+  transform: translate(0px, 10px);
+  transition: all 300ms;
+}
+
+.form-group
+  input:not(:placeholder-shown):valid
+  ~ .verification-icon
+  #valid-icon {
+  color: green;
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.form-group input:focus ~ .verification-icon-cont {
+  visibility: visible;
+}
+
+.form-group
+  input:not(:placeholder-shown):invalid
+  ~ .verification-icon
+  #invalid-icon {
+  color: red;
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.form-button {
+  position: relative;
+  width: 92%;
+  align-self: center;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
+  background-color: blueviolet;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.forgot-msg {
+  margin-left: 23px;
+  cursor: pointer;
+  margin-right: 1.5em;
+  transition: 200ms ease;
+  color: #666;
+}
+
+.forgot-msg:hover {
+  color: rgb(61, 165, 251);
+}
+.redirect-msg {
+  text-align: center;
+  color: #645fc7;
+  margin-top: 2em;
+  cursor: pointer;
+}
+
+.redirect-msg .span {
+  position: relative;
+  margin-left: 5px;
+  text-decoration: none;
+  color: inherit;
+  transition: 300ms ease-out;
+}
+
+.redirect-msg .span:hover {
+  position: relative;
+  margin-left: 5px;
+  text-decoration: underline;
+  color: inherit;
+}
+
+.checkbox-container input[type="checkbox"] {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.checkbox-container input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #999;
+  border-radius: 2px;
+}
+
+.checkbox-container input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  left: 4px;
+  bottom: 7px;
+  border: 3px solid blueviolet;
+  border-top: none;
+  border-right: none;
+  transform: rotateZ(-50deg);
+  transform-origin: center center;
+  z-index: 2;
+}
+
+.checkbox-container {
+  height: 4em;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  color: rgb(124, 124, 124);
+  margin-left: 20px;
+}
+
+.navlink {
+  text-decoration: none;
+  color: #fff;
+  align-self: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.error-msg-container {
+  background-color: transparent;
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+  bottom: -35px;
+  left: 10px;
+  color: #ff2500;
+}
+
+#login-error-container {
+  margin-top: 20px;
+}
+
+#password-error {
+  background-color: transparent;
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+  bottom: -35px;
+  left: 10px;
+  color: #ff2500;
+  visibility: hidden;
+}
