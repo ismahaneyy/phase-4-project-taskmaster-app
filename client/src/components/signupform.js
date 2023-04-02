@@ -90,7 +90,7 @@ function Signup() {
   };
 
   if(isSignedUp){
-    return <Redirect exact to = "/" />;
+    return <Redirect exact to = "/login" />;
   }
 
   return (
@@ -151,7 +151,7 @@ function Signup() {
             handleSubmit()}} >SIGN UP</button>
           <h4>Already have an account?
           &nbsp;
-            <NavLink exact to="/">
+            <NavLink exact to="/login">
               Login
             </NavLink>
           </h4>
