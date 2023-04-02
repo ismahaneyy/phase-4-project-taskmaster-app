@@ -7,13 +7,14 @@ import EmailEntryForm from './components/emailentry';
 import TokenEntryForm from './components/tokenentry';
 import NewPassWordEntry from './components/newpasswordentry';
 import Dashboard from "./components/dashboard";
+import Landingpage from './components/Landingpage';
 
 
 function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact path = "/">
+        <Route exact path = "/login">
            <Loginform/>
         </Route>
         <Route exact path = "/signup">
@@ -30,6 +31,9 @@ function App() {
         </Route>
         <Route exact path="/dashboard">
           <Dashboard/>
+        </Route>
+        <Route exact path="/">
+          <Landingpage/>
         </Route>
       </Switch>
 

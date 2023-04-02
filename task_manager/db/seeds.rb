@@ -1,7 +1,7 @@
 
 # Create Users
-user1 = User.create!(name: 'Jefff', email: 'jeffff@user.com', password: '1234567', password_reset_token: "token123")
-user2 = User.create!(name: 'Ismahann', email: 'ismahann@user.com', password: '1234567', password_reset_token: "123token")
+user1 = User.create!(name: 'Jefff', email: 'jefff@user.com', password: '1234567', password_reset_token: "Jefff123")
+user2 = User.create!(name: 'Ismahann', email: 'ismahann@user.com', password: '1234567', password_reset_token: "Ismahann123")
 
 # Create Projects for user1
 project1 = Project.create!(name: 'My Portfolio', description: 'My portfolio app', completed: false, due_date: Date.today + 1.week, user_id: user1.id)
