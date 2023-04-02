@@ -42,6 +42,7 @@
     color: white;
     padding: 150px;
     max-height: 50%;
+    align-items: center;
   }
   
   .landing-page h2 {
