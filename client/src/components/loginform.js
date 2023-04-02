@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "../styles/form.css";
+import "../styles/Login.css";
 import { NavLink, Redirect } from "react-router-dom";
 
 function Loginform() {
   const [authenticated, setAuthenticated] = useState(false);
-  const [isLoggedin, setIsLoggedin] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
 
@@ -26,13 +26,8 @@ function Loginform() {
   // input states
 
 
-  const [username, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  let handleNameInput = (name) => {
-    setName(name);
-  };
 
   let handleEmailInput = (email) => {
     setEmail(email);
@@ -52,6 +47,8 @@ function Loginform() {
       password,
     };
 
+    console.log(userObj);
+
     fetch("http://localhost:3000/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -60,7 +57,6 @@ function Loginform() {
       console.log(response);
 
       if (response.ok) {
-        setIsLoggedin(false);
         setAuthenticated(true);
         return response.json().then((data) => {
           console.log(data);
@@ -68,8 +64,6 @@ function Loginform() {
           localStorage.setItem('jwt', token.toString());
         });
       } else if (!response.ok) {
-        console.log(response);
-        setIsLoggedin(false);
         return response.json().then((error) => {
           let errorMessage = error.error;
           document.getElementById("login-error-container").innerHTML =
@@ -96,54 +90,28 @@ function Loginform() {
   };
 
   
-  return (
-    <main className="form-container">
-      <form>
-        <h1 className="form-title">Login .</h1>
-        <div className="form-group">
-          <input
-            onChange={(e) => {
-              removeErrorMessage("elogin-error-container");
-              handleEmailInput(e.target.value);
-            }}
-            type="email"
-            className="form-input"
-            placeholder="..."
-            value={email}
-            autoComplete="false"
-            required
-          />
-          <label className="form-label">
-            <span className="content-name">Email</span>
-          </label>
-          <div className="verification-icon">
-            <i id="valid-icon" className="material-icons">
-              done
-            </i>
-            <i id="invalid-icon" className="material-icons">
-              close
-            </i>
-          </div>
-          <div className="error-msg-container">
-            <h6 id="email-error-container"></h6>
-          </div>
-        </div>
-        <div className="form-group">
-          <input
-            onChange={(e) => {
-              removeErrorMessage("passlogin-error-container");
-              handlePasswordInput(e.target.value);
-            }}
-            type={password_input_type}
-            className="form-input"
-            placeholder="..."
-            required
-          />
-          <label className="form-label">
-            <span className="content-name">Password</span>
-          </label>
-          <div className="visibility-icon">
-            <i
+  return ( 
+    <div class="login">
+    <div></div>
+    <h2>Login</h2>
+    <br></br>
+    <br></br>
+    <form className="login-form">
+      <div className="textbox">
+        <input type="email" placeholder="Email"  
+       onChange={(event) =>{
+        removeErrorMessage("login-error-container");
+        handleEmailInput(event.target.value)}} value={email}/>
+        <span className="material-symbols-outlined"> account_circle </span>
+      </div>
+      <div className="textbox">
+        <input type={password_input_type} placeholder="Password"  value={password}
+          onChange={(event) => {
+            removeErrorMessage("login-error-container");
+            handlePasswordInput(event.target.value)
+            }}/>
+             <i
+             id="visibility-icons"
               onClick={() => {
                 togglePasswordVisibility();
               }}
@@ -151,31 +119,27 @@ function Loginform() {
             >
               {visibility_icon}
             </i>
-          </div>
-          <div className="error-msg-container">
-            <h6 id="login-error-container"></h6>
-          </div>
-        </div>
-        <NavLink className="navigationLink" to="/passwordresetemail">
-          <h4 className="forgot-msg">Forgot your password?</h4>
-        </NavLink>
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            handleLogin();
-          }}
-          className="form-button"
-        >
-          Login
-        </button>
-        <h4 className="redirect-msg">
-          Not a member?
-          <NavLink className="span" to="/signup">
-            <span>Sign up today</span>
-          </NavLink>
-        </h4>
-      </form>
-    </main>
+        <span className="material-symbols-outlined"> lock </span>
+      </div>
+
+     <NavLink className="navigationLink" to="/passwordresetemail">
+       <h4 className="forgot-msg">Forgot your password?</h4>
+     </NavLink>
+      <button onClick={(e)=>{
+        e.preventDefault();
+        handleLogin()}
+        } type="submit">LOGIN</button>
+     <h4 className="redirect-msg">
+       Not a member?
+       <NavLink className="span" to="/signup">
+         <span>Sign up today</span>
+       </NavLink>
+     </h4>
+     <div className="error-msg-login-container">
+          <h6 id="login-error-container"></h6>
+      </div>
+    </form>
+    </div>
   );
 }
 
