@@ -94,6 +94,13 @@ function Signup() {
   }
 
   return (
+
+    <div className="App">
+    <nav className="navbar">
+      <h1 className="logo">Task Master</h1>
+    </nav>
+
+
       <div className="login">
         <div></div>
         <h2>Sign up</h2>
@@ -156,6 +163,7 @@ function Signup() {
             </NavLink>
           </h4>
         </form>
+      </div>
       </div>
   );
 }
