@@ -16108,3 +16108,77 @@ Filter chain halted as :authenticate_user! rendered or redirected
 Completed 401 Unauthorized in 21ms (Views: 11.7ms | ActiveRecord: 0.3ms | Allocations: 1847)
 
 
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from block (2 levels) in <class:Railtie> at /usr/share/rvm/gems/ruby-2.7.4/gems/activerecord-7.0.4.3/lib/active_record/railtie.rb:264)
+Started GET "/ws" for ::1 at 2023-03-31 18:58:14 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-03-31 18:58:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-03-31 18:58:22 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-03-31 18:58:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-03-31 18:58:39 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-03-31 18:59:07 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-03-31 18:59:12 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from block (2 levels) in <class:Railtie> at /usr/share/rvm/gems/ruby-2.7.4/gems/activerecord-7.0.4.3/lib/active_record/railtie.rb:264)
+Started GET "/ws" for ::1 at 2023-03-31 19:00:11 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-03-31 19:00:17 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-03-31 19:02:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-03-31 19:02:26 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started OPTIONS "/login" for 127.0.0.1 at 2023-03-31 19:03:22 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/login"):
+  
+Started GET "/ws" for ::1 at 2023-03-31 19:06:37 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-03-31 19:06:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
