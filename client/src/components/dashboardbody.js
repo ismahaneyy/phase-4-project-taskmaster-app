@@ -14,7 +14,7 @@ function DashboardBody({ toggleTaskForm, projectId, handleProjectDelete, handleU
   let [projectObj, setProjectObj] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:3000/user/projects/${projectId}`, {
+    fetch(`https://task-master-app.onrender.com/user/projects/${projectId}`, {
     headers: { 
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + token
@@ -134,7 +134,7 @@ function DashboardBody({ toggleTaskForm, projectId, handleProjectDelete, handleU
 
 
   let handleDeleteTask = (id) => {
-    fetch(`http://localhost:3000/projects/${projectId}/tasks/${id}`, {
+    fetch(`https://task-master-app.onrender.com/projects/${projectId}/tasks/${id}`, {
       method: "DELETE",
       headers: {
       'Content-Type': 'application/json',
@@ -151,7 +151,7 @@ function DashboardBody({ toggleTaskForm, projectId, handleProjectDelete, handleU
 
   let handleUpdateTask = (id,name,description,completed) => {
     let obj = {name,description,completed}
-    fetch(`http://localhost:3000/projects/${projectId}/tasks/${id}`, {
+    fetch(`https://task-master-app.onrender.com/projects/${projectId}/tasks/${id}`, {
       method: "PATCH",
       headers: {     
       'Content-Type': 'application/json',
@@ -168,7 +168,7 @@ function DashboardBody({ toggleTaskForm, projectId, handleProjectDelete, handleU
 
   let handleUpdateCompletedTask = (id,completed) => {
     let obj = {completed}
-    fetch(`http://localhost:3000/projects/${projectId}/tasks/${id}`, {
+    fetch(`https://task-master-app.onrender.com/projects/${projectId}/tasks/${id}`, {
       method: "PATCH",
       headers: {         
       'Content-Type': 'application/json',
@@ -187,7 +187,7 @@ function DashboardBody({ toggleTaskForm, projectId, handleProjectDelete, handleU
   let[isLoggedOut, setIsLoggedOut] = useState(false)
 
   let handleLogOut = () => {
-    fetch(`http://localhost:3000/logout`, {
+    fetch(`https://task-master-app.onrender.com/logout`, {
       method: "DELETE",
       headers: {         
       'Content-Type': 'application/json',

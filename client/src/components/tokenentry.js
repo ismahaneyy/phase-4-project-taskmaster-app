@@ -45,7 +45,7 @@ function TokenEntryForm() {
       password: newPassword
     };
     if(newPassword === newPasswordConfirm){
-    fetch(`http://localhost:3000/password_reset/create`, {
+    fetch(`https://task-master-app.onrender.com/password_reset/create`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

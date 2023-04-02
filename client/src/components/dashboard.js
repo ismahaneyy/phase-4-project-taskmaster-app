@@ -48,7 +48,7 @@ function Dashboard() {
       completed,
     };
 
-    fetch(`http://localhost:3000/projects/${projectId}/tasks`, {
+    fetch(`https://task-master-app.onrender.com/projects/${projectId}/tasks`, {
       method: "POST",
       headers: {
       'Content-Type': 'application/json',
@@ -136,7 +136,7 @@ function Dashboard() {
 
     console.log(obj);
 
-    fetch("http://localhost:3000/user/projects", {
+    fetch("https://task-master-app.onrender.com/user/projects", {
       method: "POST",
       headers: {
       'Content-Type': 'application/json',
@@ -179,7 +179,7 @@ function Dashboard() {
 
 
   let handleProjectDelete = () => {
-    fetch(`http://localhost:3000/user/projects/${projectId}/`, {
+    fetch(`https://task-master-app.onrender.com/user/projects/${projectId}/`, {
       method: "DELETE",
       headers: {
       'Content-Type': 'application/json',
@@ -227,7 +227,7 @@ function Dashboard() {
       due_date: value.due_date || defaultProjectDueDate,
       completed: value.completed || defaultProjectCompleted,
     };
-    fetch(`http://localhost:3000/user/projects/${projectId}/`, {
+    fetch(`https://task-master-app.onrender.com/user/projects/${projectId}/`, {
       method: "PUT",
       headers: {
       'Content-Type': 'application/json',
@@ -315,7 +315,7 @@ function Dashboard() {
   const [projectId, setProjectId] = useState(1);
 
   useEffect(() => {
-    fetch("http://localhost:3000/user/projects", {
+    fetch("https://task-master-app.onrender.com/user/projects", {
       headers: { 
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + token

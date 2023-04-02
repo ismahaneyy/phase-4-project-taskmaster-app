@@ -59,7 +59,7 @@ function Signup() {
 
     if(email !== "" && password !== "" && confirmpassword !== ""){
     if(password === confirmpassword){    try {
-      const response = await fetch("http://localhost:3000/signup", {
+      const response = await fetch("https://task-master-app.onrender.com/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

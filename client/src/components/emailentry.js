@@ -27,7 +27,7 @@ function EmailEntryForm() {
   let sendEmail = () => {
     setIsLoading(true)
     let obj = { email: userEmail}
-    fetch(`http://localhost:3000/password_reset/new`, {
+    fetch(`https://task-master-app.onrender.com/password_reset/new`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
