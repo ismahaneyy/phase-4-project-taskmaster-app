@@ -16,14 +16,11 @@ You can access the deployed site here:
 As a new user, I want to create an account on the application so that I can access its features.
 Given that I am on the Signup page
 Then I should see the Signup form with input fields for name, email, password, and confirm password
-When I fill out the Signup form with valid information, including a unique email address and a password that meets the application's password requirements
+When I fill out the Signup form with valid information, including a unique email address and a password that has more than 6 characters.
 And I click the "Sign up" button
 Then I should be redirected to the Login page with a success message indicating that my account has been created
-And I should receive a confirmation email to the email address I provided
-When I try to sign up with an email address that is already registered in the application
-Then I should see an error message indicating that the email address is already taken
 And when I try to sign up with a password that does not meet the application's password requirements
-Then I should see an error message indicating the password requirements and be asked to try again.
+Then I should see an error message "failed to create a new account"
 
 2. Login
 
