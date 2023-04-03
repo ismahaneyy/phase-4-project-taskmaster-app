@@ -190,10 +190,13 @@ Axios
 
 ## Authors:
 
-[Ismahan Abdirizak] [https://github.com/ismahaneyy]
-[Jeff Maina] [https://github.com/Jeffy2k]
-[Keittah Oyunga] [https://github.com/KeittahSewe]
-[Ian Irungu] [https://github.com/i-muiri]
+    [Ismahan Abdirizak] [https://github.com/ismahaneyy]
+
+    [Jeff Maina] [https://github.com/Jeffy2k]
+
+    [Keittah Oyunga] [https://github.com/KeittahSewe]
+
+    [Ian Irungu] [https://github.com/i-muiri]
 
 
 ## License

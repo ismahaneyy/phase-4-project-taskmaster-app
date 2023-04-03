@@ -334,10 +334,13 @@ This request takes in the password reset token and the new password as parameter
 
 ## Authors:
 
-[Ismahan Abdirizak] [https://github.com/ismahaneyy]
-[Jeff Maina] [https://github.com/Jeffy2k]
-[Keittah Oyunga] [https://github.com/KeittahSewe]
-[Ian Irungu] [https://github.com/i-muiri]
+  [Ismahan Abdirizak] [https://github.com/ismahaneyy]
+
+  [Jeff Maina] [https://github.com/Jeffy2k]
+
+  [Keittah Oyunga] [https://github.com/KeittahSewe]
+
+  [Ian Irungu] [https://github.com/i-muiri]
 
 
 ## License
