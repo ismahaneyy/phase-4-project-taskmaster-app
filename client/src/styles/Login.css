@@ -1,6 +1,8 @@
 @media (width >= 500px) {
     body {
       padding: 0;
+    background-color: #BFD7FF;
+  
     }
   }
   
@@ -14,6 +16,7 @@
     padding: 70px 30px 44px;
     border-radius: 22px;
     background: #788BFF;
+    opacity: 0.8;
     text-align: center;
   }
   
@@ -29,6 +32,7 @@
     font-size: 36px;
     font-weight: 500;
     margin: 0 0 4px;
+
   }
   
   .login > h3 {
@@ -119,3 +123,9 @@
     text-align: left;
     text-decoration: none;
   }
+
+  input::placeholder {
+    color: white;
+    font-weight: bold;
+  }
+  

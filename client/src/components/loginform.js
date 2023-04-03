@@ -91,6 +91,12 @@ function Loginform() {
 
   
   return ( 
+
+    <div className="App">
+      <nav className="navbar">
+        <h1 className="logo">Task Master</h1>
+      </nav>
+      
     <div class="login">
     <div></div>
     <h2>Login</h2>
@@ -139,6 +145,7 @@ function Loginform() {
           <h6 id="login-error-container"></h6>
       </div>
     </form>
+    </div>
     </div>
   );
 }

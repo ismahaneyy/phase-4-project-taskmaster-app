@@ -9,7 +9,7 @@ function Landingpage() {
       <nav className="navbar">
         <h1 className="logo">Task Master</h1>
       </nav>
-      <div className="landing-page">
+      <div className="landing-page" style={{textAlign: "center"}}>
         <h2>Welcome to Task Master</h2>
         <p>Manage your tasks with ease using our powerful task management tool. </p>
         <div className="nav-buttons">

@@ -363,14 +363,14 @@ function Dashboard() {
 
   return (
     <div id="dashboard-container">
-      <div id="side-nav" className="col-nav">
+      <div id="side-nav" className="col-nav" style={{backgroundColor: '#788BFF'}}>
         <div className="row-logo">
           <h1>
-            taskMaster<span>.</span>
+            TaskMaster<span></span>
           </h1>
         </div>
-        <div className="row-boards">
-          <h5>ALL Projects ({projects.length})</h5>
+        <div className="row-boards" >
+          <h5 style={{color: 'white'}}>ALL Projects ({projects.length})</h5>
           <div className="boards-list">{projectsList}</div>
           <div
             onClick={() => {
@@ -378,9 +378,9 @@ function Dashboard() {
             }}
             className="add-board"
           >
-            <i className="material-symbols-outlined">add</i>
-            <h5>Create New Project</h5>
-            <i id="create-arrow" className="material-icons">
+            <i className="material-symbols-outlined" style={{color: 'white'}}>add</i>
+            <h5 style={{color: 'white'}}>Create New Project</h5>
+            <i id="create-arrow" style={{color: 'white'}} className="material-icons" >
               arrow_forwards
             </i>
           </div>
