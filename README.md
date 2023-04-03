@@ -12,6 +12,7 @@ You can access the deployed site here:
 ### User
 
 1. Signup
+
 As a new user, I want to create an account on the application so that I can access its features.
 Given that I am on the Signup page
 Then I should see the Signup form with input fields for name, email, password, and confirm password
