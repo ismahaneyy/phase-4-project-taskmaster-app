@@ -332,7 +332,7 @@ This request takes in an email address parameter and sends the user an email con
 
 This request takes in the password reset token and the new password as parameters.If the password is successfully updated the user will receive an email confirming so.
 
-Authors:
+## Authors:
 
 [Ismahan Abdirizak] (https://github.com/ismahaneyy)
 [Jeff Maina] (https://github.com/Jeffy2k)
@@ -340,6 +340,6 @@ Authors:
 [Ian Irungu] (https://github.com/i-muiri)
 
 
-License
+## License
 
 This project is licensed under the MIT License

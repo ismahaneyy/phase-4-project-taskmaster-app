@@ -14,7 +14,7 @@ function DashboardBody({ toggleTaskForm, projectId, handleProjectDelete, handleU
   let [projectObj, setProjectObj] = useState({});
 
   useEffect(() => {
-    fetch(`https://task-master-app.onrender.com/user/projects/${projectId}`, {
+    fetch(`https://phase-4-project-taskmaster-app.onrender.com/user/projects/${projectId}`, {
     headers: { 
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + token
@@ -25,6 +25,9 @@ function DashboardBody({ toggleTaskForm, projectId, handleProjectDelete, handleU
       console.log(data);
       setProjectObj(data);
       transferValues(data);
+    })
+    .catch((error) => {
+      console.error('Error fetching data:', error);
     });
   }, [projectId]);
 
@@ -134,7 +137,7 @@ function DashboardBody({ toggleTaskForm, projectId, handleProjectDelete, handleU
 
 
   let handleDeleteTask = (id) => {
-    fetch(`https://task-master-app.onrender.com/projects/${projectId}/tasks/${id}`, {
+    fetch(`https://phase-4-project-taskmaster-app.onrender.com/projects/${projectId}/tasks/${id}`, {
       method: "DELETE",
       headers: {
       'Content-Type': 'application/json',
@@ -151,7 +154,7 @@ function DashboardBody({ toggleTaskForm, projectId, handleProjectDelete, handleU
 
   let handleUpdateTask = (id,name,description,completed) => {
     let obj = {name,description,completed}
-    fetch(`https://task-master-app.onrender.com/projects/${projectId}/tasks/${id}`, {
+    fetch(`https://phase-4-project-taskmaster-app.onrender.com/projects/${projectId}/tasks/${id}`, {
       method: "PATCH",
       headers: {     
       'Content-Type': 'application/json',
@@ -168,7 +171,7 @@ function DashboardBody({ toggleTaskForm, projectId, handleProjectDelete, handleU
 
   let handleUpdateCompletedTask = (id,completed) => {
     let obj = {completed}
-    fetch(`https://task-master-app.onrender.com/projects/${projectId}/tasks/${id}`, {
+    fetch(`https://phase-4-project-taskmaster-app.onrender.com/projects/${projectId}/tasks/${id}`, {
       method: "PATCH",
       headers: {         
       'Content-Type': 'application/json',
@@ -187,7 +190,7 @@ function DashboardBody({ toggleTaskForm, projectId, handleProjectDelete, handleU
   let[isLoggedOut, setIsLoggedOut] = useState(false)
 
   let handleLogOut = () => {
-    fetch(`https://task-master-app.onrender.com/logout`, {
+    fetch(`https://phase-4-project-taskmaster-app.onrender.com/logout`, {
       method: "DELETE",
       headers: {         
       'Content-Type': 'application/json',

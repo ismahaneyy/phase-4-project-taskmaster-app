@@ -48,7 +48,7 @@ function Dashboard() {
       completed,
     };
 
-    fetch(`https://task-master-app.onrender.com/projects/${projectId}/tasks`, {
+    fetch(`https://phase-4-project-taskmaster-app.onrender.com/projects/${projectId}/tasks`, {
       method: "POST",
       headers: {
       'Content-Type': 'application/json',
@@ -116,10 +116,10 @@ function Dashboard() {
   const [boardName, setBoardName] = useState("");
   const [boardDescription, setBoardDescription] = useState("");
   const [boardDueDate, setBoardDueDate] = useState("");
-  const [boardCompleted, setboardCompleted] = useState("");
+  const [boardCompleted, setboardCompleted] = useState(false);
 
   let handleBoardCompleted = (value) => {
-    if (value === "Not yet") setboardCompleted(false);
+    if (value === "Not yet") {setboardCompleted(false)}
     else if (value === "Yes") {
       setboardCompleted(true);
     }
@@ -136,7 +136,7 @@ function Dashboard() {
 
     console.log(obj);
 
-    fetch("https://task-master-app.onrender.com/user/projects", {
+    fetch("https://phase-4-project-taskmaster-app.onrender.com/user/projects", {
       method: "POST",
       headers: {
       'Content-Type': 'application/json',
@@ -179,7 +179,7 @@ function Dashboard() {
 
 
   let handleProjectDelete = () => {
-    fetch(`https://task-master-app.onrender.com/user/projects/${projectId}/`, {
+    fetch(`https://phase-4-project-taskmaster-app.onrender.com/user/projects/${projectId}/`, {
       method: "DELETE",
       headers: {
       'Content-Type': 'application/json',
@@ -227,7 +227,7 @@ function Dashboard() {
       due_date: value.due_date || defaultProjectDueDate,
       completed: value.completed || defaultProjectCompleted,
     };
-    fetch(`https://task-master-app.onrender.com/user/projects/${projectId}/`, {
+    fetch(`https://phase-4-project-taskmaster-app.onrender.com/user/projects/${projectId}/`, {
       method: "PUT",
       headers: {
       'Content-Type': 'application/json',
@@ -315,7 +315,7 @@ function Dashboard() {
   const [projectId, setProjectId] = useState(1);
 
   useEffect(() => {
-    fetch("https://task-master-app.onrender.com/user/projects", {
+    fetch("https://phase-4-project-taskmaster-app.onrender.com/user/projects", {
       headers: { 
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + token
@@ -620,5 +620,6 @@ function Dashboard() {
     </div>
   );
 }
+
 
 export default Dashboard;
