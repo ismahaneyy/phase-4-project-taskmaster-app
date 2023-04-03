@@ -5,6 +5,9 @@
 You can access the deployed site here:
    - [https://client-bjda8yc9i-ismahaneyy.vercel.app/]
 
+#### NB: If validations for signup fails, you won't be able to signup ie: password should be more than 6 characters and a user should have valid email.
+    
+
 ## BDD (Behavior-Driven Development)
 ### User
 
